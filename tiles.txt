@@ -1,0 +1,10 @@
+Authors of these tiles:
+
+Monsters where created for Nethack by http://pixelhack.blogspot.com/, some are existing tiles by Itakura
+
+Background tiles are from http://www.tekepon.net/fsm/index.php
+
+Item icons by Ails: http://ails.deviantart.com/art/420-Pixel-Art-Icons-for-RPG-129892453
+
+The font is based on "Consolas", included in windows.
+
