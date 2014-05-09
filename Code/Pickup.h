@@ -30,7 +30,14 @@ class Pickup
 };
 
 
-//chooses either a pickupDef from the pickupDef table or an actor from the actor table
+/**
+* Chooses either a pickupDef from the pickupDef table or an actor from the actor table
+* 
+* @param levelDifficulty	the current game difficulty (starts at 1 and increases by 1 every floor)
+* @param table				a pointer to the table we are choosing from
+* @param tableSize			the size of that table
+* @return					the index of the item or actor we have chosen in its respective table (0 to tableSize-1)
+*/
 template <class T> int pickFromTable(int levelDifficulty, T* table, int tableSize){
 	vector<int> frequencies;
 	int difficulty = 0;

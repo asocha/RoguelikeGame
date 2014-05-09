@@ -5,6 +5,9 @@
 
 using namespace std;
 
+/**
+* Runs the game: starts with the menu screen, creates the appropriate game type, and continuously plays the current game
+*/
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
 	tl_init("My Game", 1280, 720, "tiles", 32, 3);

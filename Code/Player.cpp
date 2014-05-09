@@ -5,7 +5,12 @@ int Actor::wasAttacked = 0;
 int Actor::killedMonster;
 Log* Actor::log;
 
-//create a player that is loaded from a saved game
+/**
+* Create a player that is loaded from a saved game
+* 
+* @param world		the current game world
+* @param loadFile	the file that we are loading the player from
+*/
 Player::Player(World& world, FILE* loadFile) : Actor(){
 	initializePlayer(world);
 
@@ -88,7 +93,12 @@ error:
 	}
 }
 
-//create a new player for a new world
+/**
+* Create a new player for a new game world
+* 
+* @param world		the current game world
+* @param speedRun	true if this is a speed run game, false if this is a normal game
+*/
 Player::Player(World& world, bool speedRun) : Actor(){
 	initializePlayer(world);
 
@@ -113,7 +123,11 @@ Player::Player(World& world, bool speedRun) : Actor(){
 	}
 }
 
-//create the pickups and spells tables and set player data that is always the same
+/**
+* Create the pickups and spells tables and set player data that is always the same
+* 
+* @param world	the current game world
+*/
 void Player::initializePlayer(World& world){
 	actorDef = ActorDef(playerTile, "Player", 0, Dice(0,0,100), Dice(2,4,0), Dice(2,2,0)); //100 health, 4-8 attack, 2-4 defense
 	defNumber = -1;
@@ -203,7 +217,11 @@ void Player::initializePlayer(World& world){
 	}
 }
 
-//places the player at the first empty tile in the world
+/**
+* Places the player at the first empty tile in the world
+* 
+* @param world		the current game world
+*/
 void Player::placePlayer(World& world){
 	world.loopInnerWorld([&](Cell& cell, int& i, int& j){
 		if (cell.getTile() == empty){
@@ -231,7 +249,12 @@ void Player::placePlayer(World& world){
 	});
 }
 
-//check if player pressed a movement key, also renders the player's stats and inventory
+/**
+* Check if player pressed a movement key.
+* Also renders the player's stats and inventory.
+* 
+* @param world	the current game world
+*/
 void Player::movePlayer(World& world){
 	tuple<bool, int, int> mouseInInventory = renderInventory(world);
 
@@ -318,7 +341,13 @@ void Player::movePlayer(World& world){
 	if (speedRun && time(NULL) - startingTime > 99) die(world.getCell(location), world);
 }
 
-//player movement (called by movePlayer)
+/**
+* Player movement or attacking (called by movePlayer)
+* 
+* @param world	the current game world
+* @param coord	the location the player is trying to move to
+* @param f		a function that updates the player's location variable, if the player actually moves
+*/
 void Player::move(World& world, Coordint& coord, function<void ()> f){
 	Cell& cell = world.getCell(coord);
 	if (cell.getActor()){
@@ -343,14 +372,19 @@ void Player::move(World& world, Coordint& coord, function<void ()> f){
 	everyTurn(world);
 }
 
-//update the visibility variable on all tiles near the player that are in line of sight
-//such that the player only sees nearby tiles
+/**
+* Update the visibility variable on all tiles near the player that are in line of sight
+* such that the player only sees nearby tiles
+* 
+* @param world	the current game world
+* @param newVis	the new visibility (2 for completely visibile, 1 for partially visible)
+*/
 void Player::updateWorldVisibility(World& world, int newVis){
 	if (revealedWorld) return;
 
 	double ratio, xOffset, yOffset, x, y;
 	int numCells, xSign, ySign, prevX = 0, prevY = 0;
-	for (double i = 0; i < 6.28318531; i += 6.28318531/48){
+	for (double i = 0; i < 6.28318531; i += 6.28318531/48){ //make a circle around the player
 		x = cos(i) * 5.2;
 		y = sin(i) * 5.2;
 		
@@ -367,7 +401,7 @@ void Player::updateWorldVisibility(World& world, int newVis){
 			ratio = y / x; //ratio of y to x
 				
 			x = y = 0.5;
-			for (int j = 0; j <= numCells; j++){
+			for (int j = 0; j <= numCells; j++){ //update visibility in a line going out from the player
 				Cell& cell = world.getCell(location + Coordint(x*xSign, y*ySign));
 				cell.setVisibility(newVis);
 				if (cell.getTile() == hallwayWall) break; //wall blocking view
@@ -379,7 +413,15 @@ void Player::updateWorldVisibility(World& world, int newVis){
 	}
 }
 
-//render the player's stats, spells, and inventory, as well as the game timer in speed run mode
+/**
+* Render the player's stats, spells, and inventory, as well as the game timer in speed run mode
+* 
+* @param world	the current game world
+* @return		a tuple containing
+*					BOOL: true if the mouse is in the inventory/spells/shop, false otherwise
+*					INT:  if bool is true, the slot of the inventory/spells/shop that the mouse is over; -1 otherwise
+*					INT:  if mousing over an equipped item, which equipment slot the mouseovered item is in; -1 otherwise
+*/
 tuple<bool, int, int> Player::renderInventory(World& world){
 	//render remaining time
 	if (speedRun){
@@ -443,7 +485,15 @@ tuple<bool, int, int> Player::renderInventory(World& world){
 	return toReturn;
 }
 
-//render mouseover inventory highlight and mouseover tooltip
+/**
+* Render the mouseover inventory highlight and mouseover tooltip
+* 
+* @param world	the current game world
+* @return		a tuple containing
+*					BOOL: true if the mouse is in the inventory/spells/shop, false otherwise
+*					INT:  if bool is true, the slot of the inventory/spells/shop that the mouse is over; -1 otherwise
+*					INT:  if mousing over an equipped item, which equipment slot the mouseovered item is in; -1 otherwise
+*/
 tuple<bool, int, int> Player::renderMouseover(World& world){
 	bool inInventory = false;
 	int inventorySlot = -1;
@@ -549,7 +599,11 @@ tuple<bool, int, int> Player::renderMouseover(World& world){
 	return tuple<bool, int, int>(inInventory, inventorySlot, equippedSlot);
 }
 
-//render the shop
+/**
+* Render the shop
+* 
+* @param world	the current game world
+*/
 void Player::renderShop(World& world){
 	vector<Pickup*>& shop = world.getShop();
 
@@ -566,7 +620,12 @@ void Player::renderShop(World& world){
 	}
 }
 
-//gain experience for killing a monster (killedMonster set by actor: attack())
+/**
+* Gain experience for killing a monster. Level up if enough experience is gained.
+* Increase stats on level up.
+* 
+* @param xp	the experience gained (1-9)
+*/
 void Player::gainExperience(int xp){
 	experience += xp;
 	
@@ -594,7 +653,13 @@ void Player::gainExperience(int xp){
 	}
 }
 
-//player picks up an item, placing it in his inventory
+/**
+* The player picks up an item, placing it in his/her inventory. Alternately, the player opens
+* a chest, receiving a bunch of items.
+* 
+* @param cell	the cell the player is standing on
+* @param world	the current game world
+*/
 void Player::pickupItem(Cell& cell, World& world){
 	Pickup* pickup = cell.getPickup();
 	string name = pickup->getName();
@@ -635,7 +700,13 @@ void Player::pickupItem(Cell& cell, World& world){
 	}
 }
 
-//the player uses an item at a certain location in his/her inventory
+/**
+* The player uses an item at a certain location in his/her inventory or
+* casts a spell
+* 
+* @param item	the location of the item/spell in the inventory (spells are -12 to -7, items 0-17)
+* @return		true if the player had enough mana to cast the spell, false otherwise (always true on item use)
+*/
 bool Player::useItem(int item){
 	if (item < 0){ //cast a spell
 		if (mana < spells[item+12].getBasePrice()) return false;
@@ -653,14 +724,25 @@ bool Player::useItem(int item){
 	return true;
 }
 
-//the player unequips an item at a certain location in his/her inventory
+/**
+* The player unequips an item at a certain location in his/her inventory
+* 
+* @param item			the location of the item in the inventory (0-17)
+* @param equippedSlot	the location of the item in the equipped items array (0-2)
+*/
 void Player::unequipItem(int item, int equippedSlot){
 	log->print("You unequipped " + log->addArticle(inventory.at(item)->getName(), false) + ".", white, turn);
 	equipped[equippedSlot] = 0;
 	inventory.at(item)->unequip();
 }
 
-//the player purchases an item from the shop
+/**
+* The player purchases an item from the shop
+* 
+* @param world	the current game world
+* @param item	the location of the item in the shop (0 to shop size minus 1)
+* @return		true if the item was successfully purchased, false otherwise
+*/
 bool Player::purchaseItem(World& world, int item){
 	vector<Pickup*>& shop = world.getShop();
 	Pickup* pickup = shop.at(item);
@@ -678,7 +760,12 @@ bool Player::purchaseItem(World& world, int item){
 	return false;
 }
 
-//the player sells an item to the shop
+/**
+* The player sells an item to the shop
+* 
+* @param world	the current game world
+* @param item	the location of the item in the player's inventory (0-17)
+*/
 void Player::sellItem(World& world, int item){
 	log->print("You sold " + log->addArticle(inventory.at(item)->getName(), false) + ".", white, turn);
 	gold += inventory.at(item)->getPrice() * 3 / 4;
@@ -686,7 +773,11 @@ void Player::sellItem(World& world, int item){
 	inventory.erase(inventory.begin()+item);
 }
 
-//reduce the durability of either the player's weapon or his/her armor pieces and break the item if the durability is zero
+/**
+* Reduce the durability of either the player's weapon or his/her armor pieces and break the item if the durability is zero
+* 
+* @param slot	the location of the item in the equipped items array (0-2)
+*/
 void Player::reduceDurability(int slot){
 	Pickup* item = equipped[slot];
 	if (item){
@@ -709,7 +800,12 @@ void Player::reduceDurability(int slot){
 	}
 }
 
-//the player's used attack/defense potions slowly expire over 100 turns
+/**
+* Slowly expire the player's attack/defense potions over 100 turns
+* 
+* @param timer	a reference to either the defense timer or attack timer
+* @param bonus	a reference to either the player's defense bonus or attack bonus
+*/
 void Player::timePotions(int& timer, int& bonus){
 	if (timer){
 		timer--;
@@ -721,7 +817,11 @@ void Player::timePotions(int& timer, int& bonus){
 	else timer = 99; //just used a potion, set timer
 }
 
-//stuff that is done every time the player does something
+/**
+* Does everything that happens every turn of the game
+* 
+* @param world the current game world
+*/
 void Player::everyTurn(World& world){
 	world.moveMonsters(this); //all monsters move
 
@@ -737,7 +837,12 @@ void Player::everyTurn(World& world){
 	turn++;
 }
 
-//the player dies - game ends
+/**
+* The player dies and the game ends
+* 
+* @param cell	the cell where the player is located
+* @param world	the current game world
+*/
 void Player::die(Cell& cell, World& world){
 	remove("saveGame.txt");
 	tl_play("death.sfs");
@@ -772,7 +877,11 @@ void Player::die(Cell& cell, World& world){
 	tl_shutdown();
 }
 
-//save the current game to file
+/**
+* Save the current game to file
+* 
+* @param world	the current game world
+*/
 void Player::saveGame(World& world){
 	file = fopen("saveGame.txt", "wb");
 
@@ -878,7 +987,11 @@ void Player::saveGame(World& world){
 	fclose(file);
 }
 
-//write data out to file in an endianness-agnostic manner
+/**
+* Write data out to a file in an endianness-agnostic manner
+* 
+* @param object	the data that we are writing to file
+*/
 template <class T> void Player::writeBytes(T object){
 	T shiftedO;
 	for (int i = 1; i <= sizeof(T); i++){
@@ -887,6 +1000,9 @@ template <class T> void Player::writeBytes(T object){
 	}
 }
 
+/**
+* Destructor: delete the player's inventory
+*/
 Player::~Player(){
 	for (int i = 0; i < inventory.size(); i++){
 		delete inventory.at(i);

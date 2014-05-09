@@ -22,12 +22,17 @@ const ActorDef death(			0x39D,"Lingering Death",	9,	Dice(7, 7, 10), Dice(5, 5, 5
 const ActorDef monsters[16] = {dragon, troll, goblinWarrior, serpent, mudMonster, lizardmanWarrior,
 	eye, lizardman, goblin, shadowcaster, slimeMonster, hawk, spectre, ooze, beholder, death};
 
-//used by the player
+/** Default Constructor: used by the player actor */
 Actor::Actor(){
 	//stats set in Player.cpp
 }
 
-//used by monsters
+/**
+* Creates a new monster for the game
+*
+* @param location			the initial location of the monster
+* @param levelDifficulty	the difficulty that we are creating this monster for (typically the current floor's difficulty)
+*/
 Actor::Actor(Coordint location, int levelDifficulty){
 	this->location = location;
 	this->home = location;
@@ -41,7 +46,13 @@ Actor::Actor(Coordint location, int levelDifficulty){
 	currentHealth = actorDef.getMaxHealth();
 }
 
-//used to recreate monsters loaded from a saved game
+/**
+* Creates a monster that is loaded from a saved game
+*
+* @param defNumber		the index of the ActorDef for this monster type
+* @param chaseCount		how many steps this monster has taken chasing the player
+* @param health			the current health of the monster
+*/
 Actor::Actor(int defNumber, int chaseCount, int health){
 	this->chaseCount = chaseCount;
 	this->defNumber = defNumber;
@@ -78,11 +89,18 @@ int Actor::getDifficulty() const{
 	return actorDef.getDifficulty();
 }
 
+/** Increase a monster's chase count by 1 */
 void Actor::incrementChaseCount(){
 	chaseCount++;
 }
 
-//one actor attacks another actor, dealing damage to it
+/**
+* This actor attacks another actor, dealing damage to it
+*
+* @param target		a referense to the actor we are attacking
+* @param cell		the cell where the actor we are attacking is located
+* @param world		the current game world
+*/
 void Actor::attack(Actor& target, Cell& cell, World& world){
 	tl_play("attack.sfs");
 
@@ -107,7 +125,12 @@ void Actor::attack(Actor& target, Cell& cell, World& world){
 	}
 }
 
-//an actor dies and is removed from the world
+/**
+* A monster dies and is removed from the world
+*
+* @param cell	the cell where the monster is located
+* @param world	the current game world
+*/
 void Actor::die(Cell& cell, World& world){
 	tl_play("monsterDeath.sfs");
 
@@ -124,6 +147,11 @@ Coordint& Actor::getHome(){
 	return home;
 }
 
+/**
+* A monster gets a new home, resetting its chase count
+*
+* @param home	the location of the monster's new home
+*/
 void Actor::setHome(Coordint& home){
 	this->home = home;
 	chaseCount = 0;

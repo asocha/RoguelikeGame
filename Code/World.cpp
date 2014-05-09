@@ -1,5 +1,10 @@
 #include "World.h"
 
+/**
+* Create a game world with a specific difficulty
+* 
+* @param difficulty	the game difficulty (starts at 1 and increases by 1 every floor)
+*/
 World::World(int difficulty){
 	srand(time(NULL));
 	dummy = Cell("wall", outsideWorld);
@@ -15,7 +20,13 @@ World::World(int difficulty){
 	zoom = 1;
 }
 
-//load game world from file
+/**
+* Load a game world from file
+* 
+* @param pickups	the list of all pickup types for the game
+* @param filePtr	the file we are loading from
+* @return			true if loaded successfully, false if an error occured
+*/
 bool World::loadGame(PickupDef* pickups, FILE* filePtr){
 	file = filePtr;
 	loadingError = false;
@@ -119,6 +130,12 @@ error:	if (loadingError) i = j = worldsize; //end early if we've already had an 
 	return true;
 }
 
+/**
+* Read data from our saved game file, which is created in an Endian-agnostic manner
+* 
+* @param object		a reference to the object we are filling with data from the file
+* @return			the object, now with its loaded data
+*/
 template <class T> T World::readBytes(T& object){
 	if (!loadingError && fread(&object, 1, 1, file) != 1){
 		loadingError = true;
@@ -132,7 +149,12 @@ template <class T> T World::readBytes(T& object){
 	return object;
 }
 
-//get a Cell at a specific coordinate
+/**
+* Get a Cell at a specific coordinate
+* 
+* @param coord	the coordinate of the cell we are looking for
+* @return		a reference to the cell at the coordinate, or to the dummy cell if the coordinate is out of range
+*/
 Cell& World::getCell(Coordint& coord){
 	int x = coord.x;
 	int y = coord.y;
@@ -142,7 +164,9 @@ Cell& World::getCell(Coordint& coord){
 	return dummy;
 }
 
-//create the entire world - empty rooms and walls
+/**
+* Create the entire world, including walls, rooms, the shop, and the stairs
+*/
 void World::initializeWorld(){
 restartWorld:
 	int x, y;
@@ -216,7 +240,12 @@ restartWorld:
 	stairsCell->setType("stairs");
 }
 
-//count the number of EMPTY cells adjacent/diagonal to a given cell (includes the given cell) (called by initializeWorld)
+/**
+* Count the number of empty cells adjacent/diagonal to a given cell (includes the given cell) (called by initializeWorld)
+*
+* @param coord	the coordinate of the cell we are analyzing
+* @return		the number of adjacent/diagonal empty cells (0-9)
+*/
 int World::getNearbyEmptyCells(Coordint& coord){
 	int count = 0;
 	for (int i = coord.x - 1; i <= coord.x + 1; i++){
@@ -227,7 +256,13 @@ int World::getNearbyEmptyCells(Coordint& coord){
 	return count;
 }
 
-//used to find the largest zone of empty tiles
+/**
+* Flood fill to find the largest zone of empty tiles
+*
+* @param coord	the coordinate of the cell we are analyzing
+* @param zone	the zone number specific to this zone of empty spaces
+* @return		when the recursion finishes, returns the number of empty cells in this zone
+*/
 int World::floodFill(Coordint& coord, int zone){
 	Cell& cell = getCell(coord);
 	if (cell.getTile() == wall || cell.getZone() != 0) return 0;
@@ -241,14 +276,25 @@ int World::floodFill(Coordint& coord, int zone){
 	return visited;
 }
 
-//render a String somewhere on the screen
+/**
+* Render a String somewhere on the screen
+*
+* @param string	the String to render
+* @param x		the left-most x location we are rendering at (generally 0 to tl_xres())
+* @param y		the y location we are rendering at (generally 0 to tl_yres())
+*/
 void World::renderString(string string, int x, int y) const{
 	for (int i = 0; i < string.length(); i++){
 		tl_rendertile(string.at(i), x + i, y);
 	}
 }
 
-//render the starting menu
+/**
+* Render the starting menu
+*
+* @param gameMode	1 for normal game, 2 for speed run, 3 for load game
+* @param file		the save game file, if it exists (0 otherwise)
+*/
 void World::renderMenu(int gameMode, FILE* file) const{
 	string normalGame = "Normal Game";
 	string speedRun = "Speed Run";
@@ -281,7 +327,11 @@ void World::renderMenu(int gameMode, FILE* file) const{
 	}
 }
 
-//render the screen
+/**
+* Render the game screen, including the world and the combat log
+*
+* @param player		the location of the player
+*/
 void World::renderViewport(Coordint& player){
 	//render the world centered on the player
 	tl_scale(zoom);
@@ -326,7 +376,11 @@ void World::renderViewport(Coordint& player){
 	//the player's stats and inventory, as well as the mouseover tooltip and shop, are rendered by the Player class during movePlayer()
 }
 
-//add monsters (and pickups) to the world
+/**
+* Add monsters (and pickups) to the world
+*
+* @param pickups	the list of pickup types for the game
+*/
 void World::initializeMonsters(PickupDef* pickups){
 	int count;
 	loopInnerWorld([&,this](Cell& cell, int& i, int& j){
@@ -344,7 +398,11 @@ void World::initializeMonsters(PickupDef* pickups){
 	});
 }
 
-//add items to the shop
+/**
+* Add items to the shop
+*
+* @param pickups	the list of pickup types for the game
+*/
 void World::initializeShop(PickupDef* pickups){
 	for (int i = 0; i < 12; i++){
 		shop.push_back(new Pickup(pickups, difficulty));
@@ -355,7 +413,11 @@ void World::initializeShop(PickupDef* pickups){
 	}
 }
 
-//move all monsters (called whenever the player moves)
+/**
+* Moves all monsters (called whenever the player moves)
+*
+* @param player		a pointer to the player, to make sure we don't move him
+*/
 void World::moveMonsters(Actor* player){
 	vector<Actor*> actors; //vector of all monsters that need to move... I place monsters here as I find them to ensure that a monster doesn't move twice
 
@@ -380,7 +442,12 @@ void World::moveMonsters(Actor* player){
 	}
 }
 
-//a Monster moves or attacks (called by moveMonsters)
+/**
+* A single monster moves or attacks (called by moveMonsters)
+*
+* @param monster	a pointer to the monster
+* @param player		a pointer to the player
+*/
 void World::moveMonster(Actor* monster, Actor* player){
 	Coordint& playerCoord = player->getLocation();
 	Coordint& monsterCoord = monster->getLocation();
@@ -445,7 +512,16 @@ moveVert:	if (monsterCoord.y > playerCoord.y){ //monster tries to move up
 	}
 }
 
-//move a monster (called by moveMonster)
+/**
+* Change a monster's location (called by moveMonster)
+*
+* @param monsterCoord	the coordinate of the monster
+* @param newx			the new X coordinate for the monster (1 to worldsize-2)
+* @param newy			the new Y coordinate for the monster (1 to worldsize-2)
+* @param monster		a pointer to the monster
+* @param isChasing		true if the monster is chasing the player, false otherwise
+* @return				true if the monster successfully moved, false otherwise
+*/
 bool World::move(Coordint& monsterCoord, int newx, int newy, Actor* monster, bool isChasing){
 	Coordint& home = monster->getHome();
 	int xdist = abs(home.x - newx);
@@ -483,10 +559,16 @@ bool World::getLoadingError() const{
 	return loadingError;
 }
 
+/**
+* Record that an error occurred loading the game
+*/
 void World::hadLoadingError(){
 	loadingError = true;
 }
 
+/**
+* Alternate between the 2 zoom settings available in the game
+*/
 void World::changeZoom(){
 	zoom = 3 - zoom; //alternate between 1 and 2
 }
@@ -495,7 +577,11 @@ vector<Pickup*>& World::getShop(){
 	return shop;
 }
 
-//loops through the world, excluding the 1-tile border of walls
+/**
+* Loops through the world, excluding the 1-tile border of walls, and performs some action
+*
+* @param f	a function to execute on each Cell or coordinate in the world
+*/
 void World::loopInnerWorld(function<void (Cell& cell, int& i, int& j)> f){
 	for (int i = 1; i < worldsize - 1; i++){
 		for (int j = 1; j < worldsize - 1; j++){
@@ -504,7 +590,11 @@ void World::loopInnerWorld(function<void (Cell& cell, int& i, int& j)> f){
 	}
 }
 
-//loops through the world
+/**
+* Loops through the world and performs some action
+*
+* @param f	a function to execute on each Cell or coordinate in the world
+*/
 void World::loopWorld(function<void (Cell& cell, int& i, int& j)> f){
 	for (int i = 0; i < worldsize; i++){
 		for (int j = 0; j < worldsize; j++){
@@ -513,6 +603,9 @@ void World::loopWorld(function<void (Cell& cell, int& i, int& j)> f){
 	}
 }
 
+/**
+* World destructor: delete all the shop items, all the world's cells, and all actors except the player
+*/
 World::~World(){
 	for (int i = 0; i < worldsize; i++){
 		for (int j = 1; j < worldsize - 1; j++){

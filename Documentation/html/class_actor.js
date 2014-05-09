@@ -1,0 +1,25 @@
+var class_actor =
+[
+    [ "Actor", "class_actor.html#a2a0ff4335a1ee9096df90f288c026c8b", null ],
+    [ "Actor", "class_actor.html#a13ae0e2747587d5ddcb11f1ec54c123a", null ],
+    [ "Actor", "class_actor.html#a67124cf8b1c71f2021de4648bd0da79a", null ],
+    [ "~Actor", "class_actor.html#ad807fe8f85e72ab263a0c05e3231cb39", null ],
+    [ "attack", "class_actor.html#ad3325fd25aa4d89ef0f64db1ad914c61", null ],
+    [ "die", "class_actor.html#af78ccdab6cdcfa0848d40851b09dfa5c", null ],
+    [ "getChaseCount", "class_actor.html#a2914dac61bcfecd9370eb740ee2b4d6a", null ],
+    [ "getDefNumber", "class_actor.html#ad5a0a4967895b870efe032d92c98ae7e", null ],
+    [ "getDifficulty", "class_actor.html#a96183cc8885ff14d6ad03e95aefd5170", null ],
+    [ "getHealth", "class_actor.html#a0f351d350d8430d7ab3ad2092115b4f2", null ],
+    [ "getHome", "class_actor.html#acf07ff039272721cf239d357becfe9d8", null ],
+    [ "getLocation", "class_actor.html#a10cbf507e57cc1c12b707387aef48a8c", null ],
+    [ "getName", "class_actor.html#ae99bd3ca26ea115f097271a8b3d99dc1", null ],
+    [ "getTile", "class_actor.html#a0b25204e5e3dc08b016c795977edb0e2", null ],
+    [ "incrementChaseCount", "class_actor.html#a11b460aeae8141cb1ef8e6f8e51f11e8", null ],
+    [ "setHome", "class_actor.html#ad3d8f661e0e85d13c9cded2b5b167b11", null ],
+    [ "actorDef", "class_actor.html#afb8b5cb255957f635fb437b6c8414037", null ],
+    [ "chaseCount", "class_actor.html#a53164b4548b75df49da90fc69dccdbd2", null ],
+    [ "currentHealth", "class_actor.html#ab4b89a1f936bb1278e3fff50ee4d481a", null ],
+    [ "defNumber", "class_actor.html#a23f1984441d3ac3b80955595181e6f80", null ],
+    [ "home", "class_actor.html#a8d031c7e55ff3240e7c94e3bd20cfe19", null ],
+    [ "location", "class_actor.html#a0f2bb49cd93921e5697e52f541e47080", null ]
+];

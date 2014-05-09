@@ -3,6 +3,7 @@
 #include "Cell.h"
 #include "World.h"
 
+/** Default Constructor: Create a wall cell */
 Cell::Cell(){
 	type = "wall";
 	tile = wall;
@@ -12,6 +13,12 @@ Cell::Cell(){
 	pickup = 0;
 }
 
+/**
+* Create a cell of the game world
+*
+* @param type	the type of cell we are creating
+* @param tile	the tile number of the tile used to render the cell
+*/
 Cell::Cell(string type, int tile){
 	this->type = type;
 	this->tile = tile;
@@ -69,5 +76,6 @@ Pickup* Cell::getPickup() const{
 	return pickup;
 }
 
+/** Destructor */
 Cell::~Cell(){
 }

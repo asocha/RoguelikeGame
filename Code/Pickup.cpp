@@ -1,6 +1,11 @@
 #include "Pickup.h"
 
-//create a new pickup
+/**
+* Create a new pickup of a random type
+*
+* @param pickups			the list of pickup types for the game
+* @param levelDifficulty	the difficulty that we are creating an item for (generally the difficulty of the current floor)
+*/
 Pickup::Pickup(PickupDef* pickups, int levelDifficulty){
 	defNumber = pickFromTable(levelDifficulty, pickups, 15);
 	if (defNumber == -1) defNumber = 6; //make gold if we weren't able to choose an item
@@ -9,7 +14,13 @@ Pickup::Pickup(PickupDef* pickups, int levelDifficulty){
 	durability = pickupDef.getDurability();
 }
 
-//create a specific pickup, such as those loaded from saved games or chests
+/**
+* Create a specific pickup, such as chests or items loaded from saved games
+*
+* @param pickups		the list of pickup types for the game
+* @param defNumber		the specific index of the item type in the pickups array
+* @param durability		the current durability of the item (-1 for unequippable items)
+*/
 Pickup::Pickup(PickupDef* pickups, int defNumber, int durability){
 	if (defNumber < 0 || defNumber > 16) defNumber = 6; //shouldn't happen but make gold if defNumber is bad
 	this->defNumber = defNumber;
@@ -17,7 +28,11 @@ Pickup::Pickup(PickupDef* pickups, int defNumber, int durability){
 	this->durability = durability;
 }
 
-//activate an item and remove it forever if it is not an equippable
+/**
+* Activate an item and remove it forever if it is a consumable
+*
+* @return	the slot in the equipped array where this item will be equipped (-1 if not equippable)
+*/
 int Pickup::use(){
 	pickupDef.use();
 	if (durability == -1){
@@ -27,12 +42,16 @@ int Pickup::use(){
 	return pickupDef.getEquipSlot();
 }
 
-//unequip an item
+/** Unequip an item */
 void Pickup::unequip(){
 	pickupDef.unequip();
 }
 
-//reduce the durability of an item by 1
+/**
+* Reduce the durability of an item by 1
+*
+* @return	the remaining durability
+*/
 int Pickup::reduceDurability(){
 	return --durability;
 }
@@ -45,6 +64,11 @@ int Pickup::getDurability() const{
 	return durability;
 }
 
+/**
+* Get the total price of an item
+*
+* @return	the price
+*/
 int Pickup::getPrice() const{
 	if (durability == -1) return pickupDef.getBasePrice();
 	return pickupDef.getBasePrice() * durability;
