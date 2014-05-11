@@ -1,4 +1,3 @@
-//Cell: a piece of the world
 #pragma once
 
 #include <string>
@@ -7,6 +6,11 @@ class Actor;
 
 using namespace std;
 
+/**
+* Represents a single piece of the world
+*
+* @author Andrew Socha
+*/
 class Cell{
 	public:
 		Cell();

@@ -1,4 +1,3 @@
-//World: represents the game world
 #pragma once
 
 #include "Cell.h"
@@ -29,6 +28,11 @@ const int tiles[48] = {playerTile, empty, outsideWorld, hallwayWall, columnWall,
 //world size
 const int worldsize = 50;
 
+/**
+* represents one floor of the game world
+*
+* @author Andrew Socha
+*/
 class World{
 	public:
 		World(int difficulty);

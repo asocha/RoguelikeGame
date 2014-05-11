@@ -1,4 +1,3 @@
-//defines an Actor type that all Actors of that type share
 #pragma once
 
 #include <string>
@@ -6,6 +5,11 @@
 
 using namespace std;
 
+/**
+* Defines an Actor type that all Actors of that type share
+*
+* @author Andrew Socha
+*/
 class ActorDef{
 	public:
 		ActorDef();

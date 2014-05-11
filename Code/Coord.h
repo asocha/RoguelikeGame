@@ -1,6 +1,10 @@
-//Coord: signifies an X,Y location in the world
 #pragma once
 
+/**
+* Signifies an X,Y location in the world
+*
+* @author Andrew Socha
+*/
 template <class T> struct Coord {
 	/** Default Constructor */
 	Coord<T>(){ x = 0; y = 0; }

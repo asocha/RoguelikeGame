@@ -1,10 +1,14 @@
-//Defines an item that the player can pick up and use in the game
 #pragma once
 
 #include "PickupDef.h"
 #include "Dice.h"
 #include <vector>
 
+/**
+* Defines an item that the player can pick up and use in the game
+*
+* @author Andrew Socha
+*/
 class Pickup
 {
 	public:

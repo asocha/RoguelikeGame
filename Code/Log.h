@@ -1,5 +1,5 @@
-//Implements a combat log that is printed to the bottom of the page
 #pragma once
+
 #include <vector>
 #include <string>
 #include "tilelib.h"
@@ -18,6 +18,11 @@ const int white = 0xFFFFFFFF;
 const int background = 0xFFFFFF44;
 const int difficultyColors[3] = {green, yellow, orange};
 
+/**
+* Implements a combat log that is printed to the bottom of the page
+*
+* @author Andrew Socha
+*/
 class Log{
 	public:
 		Log();

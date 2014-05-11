@@ -1,4 +1,3 @@
-//Defines properties of pickups that are the same for all pickups of that type
 #pragma once
 
 #include <string>
@@ -8,6 +7,11 @@ class World;
 
 using namespace std;
 
+/**
+* Defines properties of pickups that are the same for all pickups of that type
+*
+* @author Andrew Socha
+*/
 class PickupDef
 {
 	public:

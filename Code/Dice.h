@@ -1,8 +1,12 @@
-//Simulates dice for random number generation.
 #pragma once
 
 #include <windows.h>
 
+/**
+* Simulates dice for random number generation.
+*
+* @author Andrew Socha
+*/
 class Dice{
 	public:
 		Dice();

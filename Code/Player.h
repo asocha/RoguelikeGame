@@ -1,11 +1,14 @@
-//Player: represents the player's character
-
 #include "Actor.h"
 #include "World.h"
 #include <functional>
 #include <tuple>
 #include <math.h>
 
+/**
+* Represents the player's character
+*
+* @author Andrew Socha
+*/
 class Player : public Actor{
 	public:
 		Player(World& world, FILE* file);

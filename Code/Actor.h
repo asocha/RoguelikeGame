@@ -1,4 +1,3 @@
-//Defines an Actor, which can be a monster, player, or other character in the world.
 #pragma once
 
 #include "Coord.h"
@@ -10,6 +9,11 @@
 #include "Pickup.h"
 class World;
 
+/**
+* Defines an Actor, which can be a monster, player, or any other character I wish to add in the future.
+*
+* @author Andrew Socha
+*/
 class Actor{
 	public:
 		Actor();
