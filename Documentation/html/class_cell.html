@@ -31,6 +31,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Roguelike Game
    </div>
+   <div id="projectbrief">A Roguelike Game: Kill monsters, collect loot!</div>
   </td>
  </tr>
  </tbody>
@@ -111,15 +112,21 @@ $(document).ready(function(){initNavTree('class_cell.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Represents a single piece of the world.  
+ <a href="class_cell.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_cell_8h_source.html">Cell.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a394510643e8664cf12b5efaf5cb99f71"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell.html#a394510643e8664cf12b5efaf5cb99f71">Cell</a> ()</td></tr>
+<tr class="memdesc:a394510643e8664cf12b5efaf5cb99f71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor: Create a wall cell.  <a href="#a394510643e8664cf12b5efaf5cb99f71">More...</a><br /></td></tr>
 <tr class="separator:a394510643e8664cf12b5efaf5cb99f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7763b67337514c4968d0122f13bc1a69"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell.html#a7763b67337514c4968d0122f13bc1a69">Cell</a> (string <a class="el" href="class_cell.html#af52507688c2661bff7396ff005c0c414">type</a>, int <a class="el" href="class_cell.html#a3b588d29d47b94459533f514cb534542">tile</a>)</td></tr>
+<tr class="memdesc:a7763b67337514c4968d0122f13bc1a69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a cell of the game world.  <a href="#a7763b67337514c4968d0122f13bc1a69">More...</a><br /></td></tr>
 <tr class="separator:a7763b67337514c4968d0122f13bc1a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fa559f7a28e2b4336c6879ca09304d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell.html#a9fa559f7a28e2b4336c6879ca09304d8">~Cell</a> ()</td></tr>
+<tr class="memdesc:a9fa559f7a28e2b4336c6879ca09304d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a9fa559f7a28e2b4336c6879ca09304d8">More...</a><br /></td></tr>
 <tr class="separator:a9fa559f7a28e2b4336c6879ca09304d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9538d88085dd240511d726ce8467fec3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell.html#a9538d88085dd240511d726ce8467fec3">setType</a> (string <a class="el" href="class_cell.html#af52507688c2661bff7396ff005c0c414">type</a>)</td></tr>
 <tr class="separator:a9538d88085dd240511d726ce8467fec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,7 +168,10 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a58387333b6d1b81fbc86583b0386cb3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_pickup.html">Pickup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cell.html#a58387333b6d1b81fbc86583b0386cb3c">pickup</a></td></tr>
 <tr class="separator:a58387333b6d1b81fbc86583b0386cb3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a single piece of the world. </p>
+<dl class="section author"><dt>Author</dt><dd>Andrew Socha </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a394510643e8664cf12b5efaf5cb99f71"></a>
 <div class="memitem">
 <div class="memproto">
@@ -174,7 +184,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Default Constructor: Create a wall cell </p>
+
+<p>Default Constructor: Create a wall cell. </p>
 
 </div>
 </div>
@@ -201,7 +212,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Create a cell of the game world</p>
+
+<p>Create a cell of the game world. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>the type of cell we are creating </td></tr>
@@ -224,7 +236,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Destructor </p>
+
+<p>Destructor. </p>
 
 </div>
 </div>
@@ -546,7 +559,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_cell.html">Cell</a></li>
-    <li class="footer">Generated on Fri May 9 2014 15:19:01 for Roguelike Game by
+    <li class="footer">Generated on Sun May 11 2014 15:48:06 for Roguelike Game by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

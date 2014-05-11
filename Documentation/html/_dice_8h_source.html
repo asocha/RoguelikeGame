@@ -31,6 +31,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Roguelike Game
    </div>
+   <div id="projectbrief">A Roguelike Game: Kill monsters, collect loot!</div>
   </td>
  </tr>
  </tbody>
@@ -104,36 +105,35 @@ $(document).ready(function(){initNavTree('_dice_8h_source.html','');});
 <div class="title">Dice.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_dice_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//Simulates dice for random number generation.</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;windows.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_dice.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_dice.html">Dice</a>{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <a class="code" href="class_dice.html#a6b9eadd945ad8fd3840379c8824e5d48">Dice</a>();</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <a class="code" href="class_dice.html#a6b9eadd945ad8fd3840379c8824e5d48">Dice</a>(<span class="keywordtype">int</span> <a class="code" href="class_dice.html#a413f6adff2be717555fbc3a6ea693be5">sides</a>, <span class="keywordtype">int</span> <a class="code" href="class_dice.html#a6599b7943cc84432a49341a0616995f0">amount</a>, <span class="keywordtype">int</span> <a class="code" href="class_dice.html#ad93de6a390437369b90295c75c4f026b">bonus</a>);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="class_dice.html#a48e90392d2ff1e6736c88f22e8a87751">~Dice</a>();</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_dice.html#a585c5f9b53193b111df1898d434af3f7">roll</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_dice.html#a413f6adff2be717555fbc3a6ea693be5">   13</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_dice.html#a413f6adff2be717555fbc3a6ea693be5">sides</a>; <span class="comment">//sides of the dice</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_dice.html#a6599b7943cc84432a49341a0616995f0">   14</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_dice.html#a6599b7943cc84432a49341a0616995f0">amount</a>; <span class="comment">//number of dice rolled</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_dice.html#ad93de6a390437369b90295c75c4f026b">   15</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_dice.html#ad93de6a390437369b90295c75c4f026b">bonus</a>; <span class="comment">//additional constant added to the result</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
-<div class="ttc" id="class_dice_html"><div class="ttname"><a href="class_dice.html">Dice</a></div><div class="ttdef"><b>Definition:</b> Dice.h:6</div></div>
-<div class="ttc" id="class_dice_html_a413f6adff2be717555fbc3a6ea693be5"><div class="ttname"><a href="class_dice.html#a413f6adff2be717555fbc3a6ea693be5">Dice::sides</a></div><div class="ttdeci">int sides</div><div class="ttdef"><b>Definition:</b> Dice.h:13</div></div>
-<div class="ttc" id="class_dice_html_a6b9eadd945ad8fd3840379c8824e5d48"><div class="ttname"><a href="class_dice.html#a6b9eadd945ad8fd3840379c8824e5d48">Dice::Dice</a></div><div class="ttdeci">Dice()</div><div class="ttdef"><b>Definition:</b> Dice.cpp:4</div></div>
-<div class="ttc" id="class_dice_html_ad93de6a390437369b90295c75c4f026b"><div class="ttname"><a href="class_dice.html#ad93de6a390437369b90295c75c4f026b">Dice::bonus</a></div><div class="ttdeci">int bonus</div><div class="ttdef"><b>Definition:</b> Dice.h:15</div></div>
-<div class="ttc" id="class_dice_html_a48e90392d2ff1e6736c88f22e8a87751"><div class="ttname"><a href="class_dice.html#a48e90392d2ff1e6736c88f22e8a87751">Dice::~Dice</a></div><div class="ttdeci">~Dice()</div><div class="ttdef"><b>Definition:</b> Dice.cpp:37</div></div>
-<div class="ttc" id="class_dice_html_a585c5f9b53193b111df1898d434af3f7"><div class="ttname"><a href="class_dice.html#a585c5f9b53193b111df1898d434af3f7">Dice::roll</a></div><div class="ttdeci">int roll() const </div><div class="ttdef"><b>Definition:</b> Dice.cpp:28</div></div>
-<div class="ttc" id="class_dice_html_a6599b7943cc84432a49341a0616995f0"><div class="ttname"><a href="class_dice.html#a6599b7943cc84432a49341a0616995f0">Dice::amount</a></div><div class="ttdeci">int amount</div><div class="ttdef"><b>Definition:</b> Dice.h:14</div></div>
+<a href="_dice_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;windows.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_dice.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_dice.html">Dice</a>{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="class_dice.html#a6b9eadd945ad8fd3840379c8824e5d48">Dice</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="class_dice.html#a6b9eadd945ad8fd3840379c8824e5d48">Dice</a>(<span class="keywordtype">int</span> <a class="code" href="class_dice.html#a413f6adff2be717555fbc3a6ea693be5">sides</a>, <span class="keywordtype">int</span> <a class="code" href="class_dice.html#a6599b7943cc84432a49341a0616995f0">amount</a>, <span class="keywordtype">int</span> <a class="code" href="class_dice.html#ad93de6a390437369b90295c75c4f026b">bonus</a>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="class_dice.html#a48e90392d2ff1e6736c88f22e8a87751">~Dice</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_dice.html#a585c5f9b53193b111df1898d434af3f7">roll</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_dice.html#a413f6adff2be717555fbc3a6ea693be5">   17</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_dice.html#a413f6adff2be717555fbc3a6ea693be5">sides</a>; <span class="comment">//sides of the dice</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_dice.html#a6599b7943cc84432a49341a0616995f0">   18</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_dice.html#a6599b7943cc84432a49341a0616995f0">amount</a>; <span class="comment">//number of dice rolled</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_dice.html#ad93de6a390437369b90295c75c4f026b">   19</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_dice.html#ad93de6a390437369b90295c75c4f026b">bonus</a>; <span class="comment">//additional constant added to the result</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="ttc" id="class_dice_html"><div class="ttname"><a href="class_dice.html">Dice</a></div><div class="ttdoc">Simulates dice for random number generation. </div><div class="ttdef"><b>Definition:</b> Dice.h:10</div></div>
+<div class="ttc" id="class_dice_html_a413f6adff2be717555fbc3a6ea693be5"><div class="ttname"><a href="class_dice.html#a413f6adff2be717555fbc3a6ea693be5">Dice::sides</a></div><div class="ttdeci">int sides</div><div class="ttdef"><b>Definition:</b> Dice.h:17</div></div>
+<div class="ttc" id="class_dice_html_a6b9eadd945ad8fd3840379c8824e5d48"><div class="ttname"><a href="class_dice.html#a6b9eadd945ad8fd3840379c8824e5d48">Dice::Dice</a></div><div class="ttdeci">Dice()</div><div class="ttdoc">Default Constuctor. </div><div class="ttdef"><b>Definition:</b> Dice.cpp:4</div></div>
+<div class="ttc" id="class_dice_html_ad93de6a390437369b90295c75c4f026b"><div class="ttname"><a href="class_dice.html#ad93de6a390437369b90295c75c4f026b">Dice::bonus</a></div><div class="ttdeci">int bonus</div><div class="ttdef"><b>Definition:</b> Dice.h:19</div></div>
+<div class="ttc" id="class_dice_html_a48e90392d2ff1e6736c88f22e8a87751"><div class="ttname"><a href="class_dice.html#a48e90392d2ff1e6736c88f22e8a87751">Dice::~Dice</a></div><div class="ttdeci">~Dice()</div><div class="ttdoc">Destructor. </div><div class="ttdef"><b>Definition:</b> Dice.cpp:37</div></div>
+<div class="ttc" id="class_dice_html_a585c5f9b53193b111df1898d434af3f7"><div class="ttname"><a href="class_dice.html#a585c5f9b53193b111df1898d434af3f7">Dice::roll</a></div><div class="ttdeci">int roll() const </div><div class="ttdoc">Roll the dice. </div><div class="ttdef"><b>Definition:</b> Dice.cpp:28</div></div>
+<div class="ttc" id="class_dice_html_a6599b7943cc84432a49341a0616995f0"><div class="ttname"><a href="class_dice.html#a6599b7943cc84432a49341a0616995f0">Dice::amount</a></div><div class="ttdeci">int amount</div><div class="ttdef"><b>Definition:</b> Dice.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_f7c8f6fb9f8a0fa9c300dea72fda1a15.html">Visual Studio 2010</a></li><li class="navelem"><a class="el" href="dir_5f240f04451bb9cd4c6b67d0dababe02.html">Projects</a></li><li class="navelem"><a class="el" href="dir_1f58244af4c7068a1b02cf49941b76d6.html">Game</a></li><li class="navelem"><a class="el" href="dir_27a10d9f4a9b69a5515a4bf1ddb24f81.html">Game</a></li><li class="navelem"><a class="el" href="_dice_8h.html">Dice.h</a></li>
-    <li class="footer">Generated on Fri May 9 2014 15:19:01 for Roguelike Game by
+    <li class="footer">Generated on Sun May 11 2014 15:48:06 for Roguelike Game by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

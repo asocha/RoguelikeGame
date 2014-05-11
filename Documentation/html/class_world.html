@@ -31,6 +31,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Roguelike Game
    </div>
+   <div id="projectbrief">A Roguelike Game: Kill monsters, collect loot!</div>
   </td>
  </tr>
  </tbody>
@@ -112,36 +113,52 @@ $(document).ready(function(){initNavTree('class_world.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>represents one floor of the game world  
+ <a href="class_world.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_world_8h_source.html">World.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7bde0931fbe1095d2e1b49aedccc6dd4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a7bde0931fbe1095d2e1b49aedccc6dd4">World</a> (int <a class="el" href="class_world.html#a50b1ae767120d5474f68e1cc75c65a88">difficulty</a>)</td></tr>
+<tr class="memdesc:a7bde0931fbe1095d2e1b49aedccc6dd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a game world with a specific difficulty.  <a href="#a7bde0931fbe1095d2e1b49aedccc6dd4">More...</a><br /></td></tr>
 <tr class="separator:a7bde0931fbe1095d2e1b49aedccc6dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c73fba541a5817fff65147ba47cd827"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a8c73fba541a5817fff65147ba47cd827">~World</a> ()</td></tr>
+<tr class="memdesc:a8c73fba541a5817fff65147ba47cd827"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_world.html" title="represents one floor of the game world ">World</a> destructor: delete all the shop items, all the world's cells, and all actors except the player.  <a href="#a8c73fba541a5817fff65147ba47cd827">More...</a><br /></td></tr>
 <tr class="separator:a8c73fba541a5817fff65147ba47cd827"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad399537b25656345dbd983087242f599"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#ad399537b25656345dbd983087242f599">loadGame</a> (<a class="el" href="class_pickup_def.html">PickupDef</a> *pickups, FILE *<a class="el" href="class_world.html#af1c0f46321d9fc28d170d82e6eaa8011">file</a>)</td></tr>
+<tr class="memdesc:ad399537b25656345dbd983087242f599"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a game world from file.  <a href="#ad399537b25656345dbd983087242f599">More...</a><br /></td></tr>
 <tr class="separator:ad399537b25656345dbd983087242f599"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac04e543cc74cd2e0b6aed284f6d87f88"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:ac04e543cc74cd2e0b6aed284f6d87f88"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_world.html#ac04e543cc74cd2e0b6aed284f6d87f88">readBytes</a> (T &amp;object)</td></tr>
+<tr class="memdesc:ac04e543cc74cd2e0b6aed284f6d87f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from our saved game file, which is created in an Endian-agnostic manner.  <a href="#ac04e543cc74cd2e0b6aed284f6d87f88">More...</a><br /></td></tr>
 <tr class="separator:ac04e543cc74cd2e0b6aed284f6d87f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefe99d68a246f1959982bc8a5ba83bbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#aefe99d68a246f1959982bc8a5ba83bbb">renderViewport</a> (<a class="el" href="_coord_8h.html#aa739a91f3d4a780958638ca29bd103c0">Coordint</a> &amp;player)</td></tr>
+<tr class="memdesc:aefe99d68a246f1959982bc8a5ba83bbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the game screen, including the world and the combat log.  <a href="#aefe99d68a246f1959982bc8a5ba83bbb">More...</a><br /></td></tr>
 <tr class="separator:aefe99d68a246f1959982bc8a5ba83bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa706fe38d03c9c20e222d5cbe61ad355"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#aa706fe38d03c9c20e222d5cbe61ad355">renderMenu</a> (int gameMode, FILE *<a class="el" href="class_world.html#af1c0f46321d9fc28d170d82e6eaa8011">file</a>) const </td></tr>
+<tr class="memdesc:aa706fe38d03c9c20e222d5cbe61ad355"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the starting menu.  <a href="#aa706fe38d03c9c20e222d5cbe61ad355">More...</a><br /></td></tr>
 <tr class="separator:aa706fe38d03c9c20e222d5cbe61ad355"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d6c1bb5c550a4ccc5323821390a77ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a2d6c1bb5c550a4ccc5323821390a77ec">renderString</a> (string string, int x, int y) const </td></tr>
+<tr class="memdesc:a2d6c1bb5c550a4ccc5323821390a77ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render a String somewhere on the screen.  <a href="#a2d6c1bb5c550a4ccc5323821390a77ec">More...</a><br /></td></tr>
 <tr class="separator:a2d6c1bb5c550a4ccc5323821390a77ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ff344ecd17b8ea8a568bbbaef060a05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_cell.html">Cell</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a2ff344ecd17b8ea8a568bbbaef060a05">getCell</a> (<a class="el" href="_coord_8h.html#aa739a91f3d4a780958638ca29bd103c0">Coordint</a> &amp;coord)</td></tr>
+<tr class="memdesc:a2ff344ecd17b8ea8a568bbbaef060a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a <a class="el" href="class_cell.html" title="Represents a single piece of the world. ">Cell</a> at a specific coordinate.  <a href="#a2ff344ecd17b8ea8a568bbbaef060a05">More...</a><br /></td></tr>
 <tr class="separator:a2ff344ecd17b8ea8a568bbbaef060a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa87fceeaea88bdc94a4c780f273c6076"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#aa87fceeaea88bdc94a4c780f273c6076">floodFill</a> (<a class="el" href="_coord_8h.html#aa739a91f3d4a780958638ca29bd103c0">Coordint</a> &amp;coord, int zone)</td></tr>
+<tr class="memdesc:aa87fceeaea88bdc94a4c780f273c6076"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flood fill to find the largest zone of empty tiles.  <a href="#aa87fceeaea88bdc94a4c780f273c6076">More...</a><br /></td></tr>
 <tr class="separator:aa87fceeaea88bdc94a4c780f273c6076"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7261d64dcc9c95fcc18bc3219e3306d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a7261d64dcc9c95fcc18bc3219e3306d1">initializeWorld</a> ()</td></tr>
+<tr class="memdesc:a7261d64dcc9c95fcc18bc3219e3306d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the entire world, including walls, rooms, the shop, and the stairs.  <a href="#a7261d64dcc9c95fcc18bc3219e3306d1">More...</a><br /></td></tr>
 <tr class="separator:a7261d64dcc9c95fcc18bc3219e3306d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addcbc12eabc8b1100562d245f68b6101"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#addcbc12eabc8b1100562d245f68b6101">initializeMonsters</a> (<a class="el" href="class_pickup_def.html">PickupDef</a> *pickups)</td></tr>
+<tr class="memdesc:addcbc12eabc8b1100562d245f68b6101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add monsters (and pickups) to the world.  <a href="#addcbc12eabc8b1100562d245f68b6101">More...</a><br /></td></tr>
 <tr class="separator:addcbc12eabc8b1100562d245f68b6101"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6b0050082c92693a04836a8f3d7c9a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#ae6b0050082c92693a04836a8f3d7c9a5">initializeShop</a> (<a class="el" href="class_pickup_def.html">PickupDef</a> *pickups)</td></tr>
+<tr class="memdesc:ae6b0050082c92693a04836a8f3d7c9a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add items to the shop.  <a href="#ae6b0050082c92693a04836a8f3d7c9a5">More...</a><br /></td></tr>
 <tr class="separator:ae6b0050082c92693a04836a8f3d7c9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a2da420e652a83745c6a2da3ca0b1d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a4a2da420e652a83745c6a2da3ca0b1d1">moveMonsters</a> (<a class="el" href="class_actor.html">Actor</a> *player)</td></tr>
+<tr class="memdesc:a4a2da420e652a83745c6a2da3ca0b1d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves all monsters (called whenever the player moves)  <a href="#a4a2da420e652a83745c6a2da3ca0b1d1">More...</a><br /></td></tr>
 <tr class="separator:a4a2da420e652a83745c6a2da3ca0b1d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab517d9a60b353d65e6ef3834361e183b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_log.html">Log</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#ab517d9a60b353d65e6ef3834361e183b">getLog</a> ()</td></tr>
 <tr class="separator:ab517d9a60b353d65e6ef3834361e183b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,21 +173,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab8c3b62d6a32faf215f5731cc48428a0"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_pickup.html">Pickup</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#ab8c3b62d6a32faf215f5731cc48428a0">getShop</a> ()</td></tr>
 <tr class="separator:ab8c3b62d6a32faf215f5731cc48428a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a699863a3bf1bc3cfb91fb4fe77410a13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a699863a3bf1bc3cfb91fb4fe77410a13">changeZoom</a> ()</td></tr>
+<tr class="memdesc:a699863a3bf1bc3cfb91fb4fe77410a13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alternate between the 2 zoom settings available in the game.  <a href="#a699863a3bf1bc3cfb91fb4fe77410a13">More...</a><br /></td></tr>
 <tr class="separator:a699863a3bf1bc3cfb91fb4fe77410a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42c97700d6c4f9f96620e490839330d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a42c97700d6c4f9f96620e490839330d1">hadLoadingError</a> ()</td></tr>
+<tr class="memdesc:a42c97700d6c4f9f96620e490839330d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record that an error occurred loading the game.  <a href="#a42c97700d6c4f9f96620e490839330d1">More...</a><br /></td></tr>
 <tr class="separator:a42c97700d6c4f9f96620e490839330d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88c1992b8741928881f30dd640edfa1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a88c1992b8741928881f30dd640edfa1b">loopInnerWorld</a> (function&lt; void(<a class="el" href="class_cell.html">Cell</a> &amp;cell, int &amp;i, int &amp;j)&gt; f)</td></tr>
+<tr class="memdesc:a88c1992b8741928881f30dd640edfa1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loops through the world, excluding the 1-tile border of walls, and performs some action.  <a href="#a88c1992b8741928881f30dd640edfa1b">More...</a><br /></td></tr>
 <tr class="separator:a88c1992b8741928881f30dd640edfa1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d1715f3e4025737e2ba4a960d739316"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a4d1715f3e4025737e2ba4a960d739316">loopWorld</a> (function&lt; void(<a class="el" href="class_cell.html">Cell</a> &amp;cell, int &amp;i, int &amp;j)&gt; f)</td></tr>
+<tr class="memdesc:a4d1715f3e4025737e2ba4a960d739316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loops through the world and performs some action.  <a href="#a4d1715f3e4025737e2ba4a960d739316">More...</a><br /></td></tr>
 <tr class="separator:a4d1715f3e4025737e2ba4a960d739316"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a4b1d823dc87cc3cb4718e7f710ecacf1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a4b1d823dc87cc3cb4718e7f710ecacf1">moveMonster</a> (<a class="el" href="class_actor.html">Actor</a> *monster, <a class="el" href="class_actor.html">Actor</a> *player)</td></tr>
+<tr class="memdesc:a4b1d823dc87cc3cb4718e7f710ecacf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">A single monster moves or attacks (called by moveMonsters)  <a href="#a4b1d823dc87cc3cb4718e7f710ecacf1">More...</a><br /></td></tr>
 <tr class="separator:a4b1d823dc87cc3cb4718e7f710ecacf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2377aae393836c676d7409cde8282e3c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a2377aae393836c676d7409cde8282e3c">move</a> (<a class="el" href="_coord_8h.html#aa739a91f3d4a780958638ca29bd103c0">Coordint</a> &amp;monsterCoord, int newx, int newy, <a class="el" href="class_actor.html">Actor</a> *monster, bool isChasing)</td></tr>
+<tr class="memdesc:a2377aae393836c676d7409cde8282e3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change a monster's location (called by moveMonster)  <a href="#a2377aae393836c676d7409cde8282e3c">More...</a><br /></td></tr>
 <tr class="separator:a2377aae393836c676d7409cde8282e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c434012eb7c31b1dfb01f3802baad94"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#a2c434012eb7c31b1dfb01f3802baad94">getNearbyEmptyCells</a> (<a class="el" href="_coord_8h.html#aa739a91f3d4a780958638ca29bd103c0">Coordint</a> &amp;coord)</td></tr>
+<tr class="memdesc:a2c434012eb7c31b1dfb01f3802baad94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count the number of empty cells adjacent/diagonal to a given cell (includes the given cell) (called by initializeWorld)  <a href="#a2c434012eb7c31b1dfb01f3802baad94">More...</a><br /></td></tr>
 <tr class="separator:a2c434012eb7c31b1dfb01f3802baad94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -194,7 +218,10 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ae22bda6a1295e8a416f89103418c5cc6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world.html#ae22bda6a1295e8a416f89103418c5cc6">zoom</a></td></tr>
 <tr class="separator:ae22bda6a1295e8a416f89103418c5cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>represents one floor of the game world </p>
+<dl class="section author"><dt>Author</dt><dd>Andrew Socha </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a7bde0931fbe1095d2e1b49aedccc6dd4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -208,7 +235,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Create a game world with a specific difficulty</p>
+
+<p>Create a game world with a specific difficulty. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">difficulty</td><td>the game difficulty (starts at 1 and increases by 1 every floor) </td></tr>
@@ -230,7 +258,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p><a class="el" href="class_world.html">World</a> destructor: delete all the shop items, all the world's cells, and all actors except the player </p>
+
+<p><a class="el" href="class_world.html" title="represents one floor of the game world ">World</a> destructor: delete all the shop items, all the world's cells, and all actors except the player. </p>
 
 </div>
 </div>
@@ -247,7 +276,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Alternate between the 2 zoom settings available in the game </p>
+
+<p>Alternate between the 2 zoom settings available in the game. </p>
 
 </div>
 </div>
@@ -274,7 +304,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Flood fill to find the largest zone of empty tiles</p>
+
+<p>Flood fill to find the largest zone of empty tiles. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">coord</td><td>the coordinate of the cell we are analyzing </td></tr>
@@ -299,7 +330,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get a <a class="el" href="class_cell.html">Cell</a> at a specific coordinate</p>
+
+<p>Get a <a class="el" href="class_cell.html" title="Represents a single piece of the world. ">Cell</a> at a specific coordinate. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">coord</td><td>the coordinate of the cell we are looking for </td></tr>
@@ -391,7 +423,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Count the number of empty cells adjacent/diagonal to a given cell (includes the given cell) (called by initializeWorld)</p>
+
+<p>Count the number of empty cells adjacent/diagonal to a given cell (includes the given cell) (called by initializeWorld) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">coord</td><td>the coordinate of the cell we are analyzing </td></tr>
@@ -444,7 +477,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Record that an error occurred loading the game </p>
+
+<p>Record that an error occurred loading the game. </p>
 
 </div>
 </div>
@@ -461,7 +495,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Add monsters (and pickups) to the world</p>
+
+<p>Add monsters (and pickups) to the world. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pickups</td><td>the list of pickup types for the game </td></tr>
@@ -484,7 +519,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Add items to the shop</p>
+
+<p>Add items to the shop. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pickups</td><td>the list of pickup types for the game </td></tr>
@@ -506,7 +542,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Create the entire world, including walls, rooms, the shop, and the stairs </p>
+
+<p>Create the entire world, including walls, rooms, the shop, and the stairs. </p>
 
 </div>
 </div>
@@ -533,7 +570,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Load a game world from file</p>
+
+<p>Load a game world from file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pickups</td><td>the list of all pickup types for the game </td></tr>
@@ -558,10 +596,11 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Loops through the world, excluding the 1-tile border of walls, and performs some action</p>
+
+<p>Loops through the world, excluding the 1-tile border of walls, and performs some action. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">f</td><td>a function to execute on each <a class="el" href="class_cell.html">Cell</a> or coordinate in the world </td></tr>
+    <tr><td class="paramname">f</td><td>a function to execute on each <a class="el" href="class_cell.html" title="Represents a single piece of the world. ">Cell</a> or coordinate in the world </td></tr>
   </table>
   </dd>
 </dl>
@@ -581,10 +620,11 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Loops through the world and performs some action</p>
+
+<p>Loops through the world and performs some action. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">f</td><td>a function to execute on each <a class="el" href="class_cell.html">Cell</a> or coordinate in the world </td></tr>
+    <tr><td class="paramname">f</td><td>a function to execute on each <a class="el" href="class_cell.html" title="Represents a single piece of the world. ">Cell</a> or coordinate in the world </td></tr>
   </table>
   </dd>
 </dl>
@@ -640,7 +680,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Change a monster's location (called by moveMonster)</p>
+
+<p>Change a monster's location (called by moveMonster) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">monsterCoord</td><td>the coordinate of the monster </td></tr>
@@ -686,7 +727,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>A single monster moves or attacks (called by moveMonsters)</p>
+
+<p>A single monster moves or attacks (called by moveMonsters) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">monster</td><td>a pointer to the monster </td></tr>
@@ -710,7 +752,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Moves all monsters (called whenever the player moves)</p>
+
+<p>Moves all monsters (called whenever the player moves) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">player</td><td>a pointer to the player, to make sure we don't move him </td></tr>
@@ -735,7 +778,8 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Read data from our saved game file, which is created in an Endian-agnostic manner</p>
+
+<p>Read data from our saved game file, which is created in an Endian-agnostic manner. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">object</td><td>a reference to the object we are filling with data from the file </td></tr>
@@ -769,7 +813,8 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Render the starting menu</p>
+
+<p>Render the starting menu. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">gameMode</td><td>1 for normal game, 2 for speed run, 3 for load game </td></tr>
@@ -809,7 +854,8 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Render a String somewhere on the screen</p>
+
+<p>Render a String somewhere on the screen. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">string</td><td>the String to render </td></tr>
@@ -834,7 +880,8 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Render the game screen, including the world and the combat log</p>
+
+<p>Render the game screen, including the world and the combat log. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">player</td><td>the location of the player </td></tr>
@@ -1035,7 +1082,7 @@ template&lt;class T &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_world.html">World</a></li>
-    <li class="footer">Generated on Fri May 9 2014 15:19:01 for Roguelike Game by
+    <li class="footer">Generated on Sun May 11 2014 15:48:06 for Roguelike Game by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

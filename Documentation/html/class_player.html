@@ -31,6 +31,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Roguelike Game
    </div>
+   <div id="projectbrief">A Roguelike Game: Kill monsters, collect loot!</div>
   </td>
  </tr>
  </tbody>
@@ -112,6 +113,9 @@ $(document).ready(function(){initNavTree('class_player.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Represents the player's character.  
+ <a href="class_player.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_player_8h_source.html">Player.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Player:</div>
@@ -119,36 +123,47 @@ Inheritance diagram for Player:</div>
  <div class="center">
   <img src="class_player.png" usemap="#Player_map" alt=""/>
   <map id="Player_map" name="Player_map">
-<area href="class_actor.html" alt="Actor" shape="rect" coords="0,0,49,24"/>
+<area href="class_actor.html" title="Defines an Actor, which can be a monster, player, or any other character I wish to add in the future..." alt="Actor" shape="rect" coords="0,0,49,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a28a4c2e0dc3bc30cf43b5a5d1b1346b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a28a4c2e0dc3bc30cf43b5a5d1b1346b1">Player</a> (<a class="el" href="class_world.html">World</a> &amp;world, FILE *<a class="el" href="class_player.html#aef5bc4f4c1cdfcef27fbb784810643fd">file</a>)</td></tr>
+<tr class="memdesc:a28a4c2e0dc3bc30cf43b5a5d1b1346b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a player that is loaded from a saved game.  <a href="#a28a4c2e0dc3bc30cf43b5a5d1b1346b1">More...</a><br /></td></tr>
 <tr class="separator:a28a4c2e0dc3bc30cf43b5a5d1b1346b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21cf65ae371867402cd64dd157ab6462"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a21cf65ae371867402cd64dd157ab6462">Player</a> (<a class="el" href="class_world.html">World</a> &amp;world, bool <a class="el" href="class_player.html#a4f1f0a65fecb89ecfb53a40f76201f2d">speedRun</a>)</td></tr>
+<tr class="memdesc:a21cf65ae371867402cd64dd157ab6462"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new player for a new game world.  <a href="#a21cf65ae371867402cd64dd157ab6462">More...</a><br /></td></tr>
 <tr class="separator:a21cf65ae371867402cd64dd157ab6462"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a749d2c00e1fe0f5c2746f7505a58c062"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">~Player</a> ()</td></tr>
+<tr class="memdesc:a749d2c00e1fe0f5c2746f7505a58c062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor: delete the player's inventory.  <a href="#a749d2c00e1fe0f5c2746f7505a58c062">More...</a><br /></td></tr>
 <tr class="separator:a749d2c00e1fe0f5c2746f7505a58c062"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8233fae427088d95151d22eb2aca2b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ab8233fae427088d95151d22eb2aca2b9">movePlayer</a> (<a class="el" href="class_world.html">World</a> &amp;world)</td></tr>
+<tr class="memdesc:ab8233fae427088d95151d22eb2aca2b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if player pressed a movement key.  <a href="#ab8233fae427088d95151d22eb2aca2b9">More...</a><br /></td></tr>
 <tr class="separator:ab8233fae427088d95151d22eb2aca2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f8ac202d90608d80abbe304920ae2d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a7f8ac202d90608d80abbe304920ae2d2">pickupItem</a> (<a class="el" href="class_cell.html">Cell</a> &amp;cell, <a class="el" href="class_world.html">World</a> &amp;world)</td></tr>
+<tr class="memdesc:a7f8ac202d90608d80abbe304920ae2d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The player picks up an item, placing it in his/her inventory.  <a href="#a7f8ac202d90608d80abbe304920ae2d2">More...</a><br /></td></tr>
 <tr class="separator:a7f8ac202d90608d80abbe304920ae2d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9e798b2a8b13867d2e9fc7bb44c2ed8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ae9e798b2a8b13867d2e9fc7bb44c2ed8">saveGame</a> (<a class="el" href="class_world.html">World</a> &amp;world)</td></tr>
+<tr class="memdesc:ae9e798b2a8b13867d2e9fc7bb44c2ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the current game to file.  <a href="#ae9e798b2a8b13867d2e9fc7bb44c2ed8">More...</a><br /></td></tr>
 <tr class="separator:ae9e798b2a8b13867d2e9fc7bb44c2ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_actor"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_actor')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_actor.html">Actor</a></td></tr>
 <tr class="memitem:a2a0ff4335a1ee9096df90f288c026c8b inherit pub_methods_class_actor"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#a2a0ff4335a1ee9096df90f288c026c8b">Actor</a> ()</td></tr>
+<tr class="memdesc:a2a0ff4335a1ee9096df90f288c026c8b inherit pub_methods_class_actor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor: used by the player actor.  <a href="#a2a0ff4335a1ee9096df90f288c026c8b">More...</a><br /></td></tr>
 <tr class="separator:a2a0ff4335a1ee9096df90f288c026c8b inherit pub_methods_class_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13ae0e2747587d5ddcb11f1ec54c123a inherit pub_methods_class_actor"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#a13ae0e2747587d5ddcb11f1ec54c123a">Actor</a> (<a class="el" href="_coord_8h.html#aa739a91f3d4a780958638ca29bd103c0">Coordint</a> <a class="el" href="class_actor.html#a0f2bb49cd93921e5697e52f541e47080">location</a>, int levelDifficulty)</td></tr>
+<tr class="memdesc:a13ae0e2747587d5ddcb11f1ec54c123a inherit pub_methods_class_actor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new monster for the game.  <a href="#a13ae0e2747587d5ddcb11f1ec54c123a">More...</a><br /></td></tr>
 <tr class="separator:a13ae0e2747587d5ddcb11f1ec54c123a inherit pub_methods_class_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67124cf8b1c71f2021de4648bd0da79a inherit pub_methods_class_actor"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#a67124cf8b1c71f2021de4648bd0da79a">Actor</a> (int <a class="el" href="class_actor.html#a23f1984441d3ac3b80955595181e6f80">defNumber</a>, int <a class="el" href="class_actor.html#a53164b4548b75df49da90fc69dccdbd2">chaseCount</a>, int health)</td></tr>
+<tr class="memdesc:a67124cf8b1c71f2021de4648bd0da79a inherit pub_methods_class_actor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a monster that is loaded from a saved game.  <a href="#a67124cf8b1c71f2021de4648bd0da79a">More...</a><br /></td></tr>
 <tr class="separator:a67124cf8b1c71f2021de4648bd0da79a inherit pub_methods_class_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad807fe8f85e72ab263a0c05e3231cb39 inherit pub_methods_class_actor"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#ad807fe8f85e72ab263a0c05e3231cb39">~Actor</a> ()</td></tr>
 <tr class="separator:ad807fe8f85e72ab263a0c05e3231cb39 inherit pub_methods_class_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3325fd25aa4d89ef0f64db1ad914c61 inherit pub_methods_class_actor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#ad3325fd25aa4d89ef0f64db1ad914c61">attack</a> (<a class="el" href="class_actor.html">Actor</a> &amp;target, <a class="el" href="class_cell.html">Cell</a> &amp;cell, <a class="el" href="class_world.html">World</a> &amp;world)</td></tr>
+<tr class="memdesc:ad3325fd25aa4d89ef0f64db1ad914c61 inherit pub_methods_class_actor"><td class="mdescLeft">&#160;</td><td class="mdescRight">This actor attacks another actor, dealing damage to it.  <a href="#ad3325fd25aa4d89ef0f64db1ad914c61">More...</a><br /></td></tr>
 <tr class="separator:ad3325fd25aa4d89ef0f64db1ad914c61 inherit pub_methods_class_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11b460aeae8141cb1ef8e6f8e51f11e8 inherit pub_methods_class_actor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#a11b460aeae8141cb1ef8e6f8e51f11e8">incrementChaseCount</a> ()</td></tr>
+<tr class="memdesc:a11b460aeae8141cb1ef8e6f8e51f11e8 inherit pub_methods_class_actor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase a monster's chase count by 1.  <a href="#a11b460aeae8141cb1ef8e6f8e51f11e8">More...</a><br /></td></tr>
 <tr class="separator:a11b460aeae8141cb1ef8e6f8e51f11e8 inherit pub_methods_class_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b25204e5e3dc08b016c795977edb0e2 inherit pub_methods_class_actor"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#a0b25204e5e3dc08b016c795977edb0e2">getTile</a> () const </td></tr>
 <tr class="separator:a0b25204e5e3dc08b016c795977edb0e2 inherit pub_methods_class_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,44 +182,62 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acf07ff039272721cf239d357becfe9d8 inherit pub_methods_class_actor"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_coord_8h.html#aa739a91f3d4a780958638ca29bd103c0">Coordint</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#acf07ff039272721cf239d357becfe9d8">getHome</a> ()</td></tr>
 <tr class="separator:acf07ff039272721cf239d357becfe9d8 inherit pub_methods_class_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3d8f661e0e85d13c9cded2b5b167b11 inherit pub_methods_class_actor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#ad3d8f661e0e85d13c9cded2b5b167b11">setHome</a> (<a class="el" href="_coord_8h.html#aa739a91f3d4a780958638ca29bd103c0">Coordint</a> &amp;<a class="el" href="class_actor.html#a8d031c7e55ff3240e7c94e3bd20cfe19">home</a>)</td></tr>
+<tr class="memdesc:ad3d8f661e0e85d13c9cded2b5b167b11 inherit pub_methods_class_actor"><td class="mdescLeft">&#160;</td><td class="mdescRight">A monster gets a new home, resetting its chase count.  <a href="#ad3d8f661e0e85d13c9cded2b5b167b11">More...</a><br /></td></tr>
 <tr class="separator:ad3d8f661e0e85d13c9cded2b5b167b11 inherit pub_methods_class_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a4977851dd79c2817972109327328fe58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a4977851dd79c2817972109327328fe58">initializePlayer</a> (<a class="el" href="class_world.html">World</a> &amp;world)</td></tr>
+<tr class="memdesc:a4977851dd79c2817972109327328fe58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the pickups and spells tables and set player data that is always the same.  <a href="#a4977851dd79c2817972109327328fe58">More...</a><br /></td></tr>
 <tr class="separator:a4977851dd79c2817972109327328fe58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d36ae4a47a0f9023e1fc42cba771ecb"><td class="memItemLeft" align="right" valign="top">tuple&lt; bool, int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a1d36ae4a47a0f9023e1fc42cba771ecb">renderInventory</a> (<a class="el" href="class_world.html">World</a> &amp;world)</td></tr>
+<tr class="memdesc:a1d36ae4a47a0f9023e1fc42cba771ecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the player's stats, spells, and inventory, as well as the game timer in speed run mode.  <a href="#a1d36ae4a47a0f9023e1fc42cba771ecb">More...</a><br /></td></tr>
 <tr class="separator:a1d36ae4a47a0f9023e1fc42cba771ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9ec668bc2157d59fdad39e68c653fbe"><td class="memItemLeft" align="right" valign="top">tuple&lt; bool, int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ae9ec668bc2157d59fdad39e68c653fbe">renderMouseover</a> (<a class="el" href="class_world.html">World</a> &amp;world)</td></tr>
+<tr class="memdesc:ae9ec668bc2157d59fdad39e68c653fbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the mouseover inventory highlight and mouseover tooltip.  <a href="#ae9ec668bc2157d59fdad39e68c653fbe">More...</a><br /></td></tr>
 <tr class="separator:ae9ec668bc2157d59fdad39e68c653fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f6fb3261697e7af23e16e63b6f32ba7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a8f6fb3261697e7af23e16e63b6f32ba7">renderShop</a> (<a class="el" href="class_world.html">World</a> &amp;world)</td></tr>
+<tr class="memdesc:a8f6fb3261697e7af23e16e63b6f32ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the shop.  <a href="#a8f6fb3261697e7af23e16e63b6f32ba7">More...</a><br /></td></tr>
 <tr class="separator:a8f6fb3261697e7af23e16e63b6f32ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1f883fe1c6e50b43fe4cafb827dcc4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ae1f883fe1c6e50b43fe4cafb827dcc4f">move</a> (<a class="el" href="class_world.html">World</a> &amp;world, <a class="el" href="_coord_8h.html#aa739a91f3d4a780958638ca29bd103c0">Coordint</a> &amp;coord, function&lt; void()&gt; f)</td></tr>
+<tr class="memdesc:ae1f883fe1c6e50b43fe4cafb827dcc4f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_player.html" title="Represents the player&#39;s character. ">Player</a> movement or attacking (called by movePlayer)  <a href="#ae1f883fe1c6e50b43fe4cafb827dcc4f">More...</a><br /></td></tr>
 <tr class="separator:ae1f883fe1c6e50b43fe4cafb827dcc4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfe41715b0d7685e375a3d305ff72f9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#adfe41715b0d7685e375a3d305ff72f9d">updateWorldVisibility</a> (<a class="el" href="class_world.html">World</a> &amp;world, int newVis)</td></tr>
+<tr class="memdesc:adfe41715b0d7685e375a3d305ff72f9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the visibility variable on all tiles near the player that are in line of sight such that the player only sees nearby tiles.  <a href="#adfe41715b0d7685e375a3d305ff72f9d">More...</a><br /></td></tr>
 <tr class="separator:adfe41715b0d7685e375a3d305ff72f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fea8ea6e859f3b5bd710949890ea9bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a9fea8ea6e859f3b5bd710949890ea9bc">gainExperience</a> (int xp)</td></tr>
+<tr class="memdesc:a9fea8ea6e859f3b5bd710949890ea9bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gain experience for killing a monster.  <a href="#a9fea8ea6e859f3b5bd710949890ea9bc">More...</a><br /></td></tr>
 <tr class="separator:a9fea8ea6e859f3b5bd710949890ea9bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae609ea9c8b8d0fca22218e9b00d0b4c9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ae609ea9c8b8d0fca22218e9b00d0b4c9">useItem</a> (int item)</td></tr>
+<tr class="memdesc:ae609ea9c8b8d0fca22218e9b00d0b4c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The player uses an item at a certain location in his/her inventory or casts a spell.  <a href="#ae609ea9c8b8d0fca22218e9b00d0b4c9">More...</a><br /></td></tr>
 <tr class="separator:ae609ea9c8b8d0fca22218e9b00d0b4c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4adea87b59e62ac35739dc243f095dbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a4adea87b59e62ac35739dc243f095dbc">unequipItem</a> (int item, int equippedSlot)</td></tr>
+<tr class="memdesc:a4adea87b59e62ac35739dc243f095dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The player unequips an item at a certain location in his/her inventory.  <a href="#a4adea87b59e62ac35739dc243f095dbc">More...</a><br /></td></tr>
 <tr class="separator:a4adea87b59e62ac35739dc243f095dbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ea7e348d03131251dff5fdccd72bfb7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a7ea7e348d03131251dff5fdccd72bfb7">purchaseItem</a> (<a class="el" href="class_world.html">World</a> &amp;world, int item)</td></tr>
+<tr class="memdesc:a7ea7e348d03131251dff5fdccd72bfb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The player purchases an item from the shop.  <a href="#a7ea7e348d03131251dff5fdccd72bfb7">More...</a><br /></td></tr>
 <tr class="separator:a7ea7e348d03131251dff5fdccd72bfb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30016396a2712d200c1805c56fd81d11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a30016396a2712d200c1805c56fd81d11">sellItem</a> (<a class="el" href="class_world.html">World</a> &amp;world, int item)</td></tr>
+<tr class="memdesc:a30016396a2712d200c1805c56fd81d11"><td class="mdescLeft">&#160;</td><td class="mdescRight">The player sells an item to the shop.  <a href="#a30016396a2712d200c1805c56fd81d11">More...</a><br /></td></tr>
 <tr class="separator:a30016396a2712d200c1805c56fd81d11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b0e2504ed448d638f1055087fb44817"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a8b0e2504ed448d638f1055087fb44817">reduceDurability</a> (int slot)</td></tr>
+<tr class="memdesc:a8b0e2504ed448d638f1055087fb44817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce the durability of either the player's weapon or his/her armor pieces and break the item if the durability is zero.  <a href="#a8b0e2504ed448d638f1055087fb44817">More...</a><br /></td></tr>
 <tr class="separator:a8b0e2504ed448d638f1055087fb44817"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60d47bf36746c769707f9615ea987f3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a60d47bf36746c769707f9615ea987f3c">timePotions</a> (int &amp;timer, int &amp;bonus)</td></tr>
+<tr class="memdesc:a60d47bf36746c769707f9615ea987f3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slowly expire the player's attack/defense potions over 100 turns.  <a href="#a60d47bf36746c769707f9615ea987f3c">More...</a><br /></td></tr>
 <tr class="separator:a60d47bf36746c769707f9615ea987f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04e0f9d5fe59ff8e01886dcd03e5b19a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a04e0f9d5fe59ff8e01886dcd03e5b19a">everyTurn</a> (<a class="el" href="class_world.html">World</a> &amp;world)</td></tr>
+<tr class="memdesc:a04e0f9d5fe59ff8e01886dcd03e5b19a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does everything that happens every turn of the game.  <a href="#a04e0f9d5fe59ff8e01886dcd03e5b19a">More...</a><br /></td></tr>
 <tr class="separator:a04e0f9d5fe59ff8e01886dcd03e5b19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb9447e0a53ec7745e281bcc0af8cde1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#afb9447e0a53ec7745e281bcc0af8cde1">placePlayer</a> (<a class="el" href="class_world.html">World</a> &amp;world)</td></tr>
+<tr class="memdesc:afb9447e0a53ec7745e281bcc0af8cde1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Places the player at the first empty tile in the world.  <a href="#afb9447e0a53ec7745e281bcc0af8cde1">More...</a><br /></td></tr>
 <tr class="separator:afb9447e0a53ec7745e281bcc0af8cde1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac661dc5bcd31b094349296a153766e8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ac661dc5bcd31b094349296a153766e8f">die</a> (<a class="el" href="class_cell.html">Cell</a> &amp;cell, <a class="el" href="class_world.html">World</a> &amp;world)</td></tr>
+<tr class="memdesc:ac661dc5bcd31b094349296a153766e8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The player dies and the game ends.  <a href="#ac661dc5bcd31b094349296a153766e8f">More...</a><br /></td></tr>
 <tr class="separator:ac661dc5bcd31b094349296a153766e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bb4df4d26ee69fa561af98f99b01cf6"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a7bb4df4d26ee69fa561af98f99b01cf6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_player.html#a7bb4df4d26ee69fa561af98f99b01cf6">writeBytes</a> (T object)</td></tr>
+<tr class="memdesc:a7bb4df4d26ee69fa561af98f99b01cf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data out to a file in an endianness-agnostic manner.  <a href="#a7bb4df4d26ee69fa561af98f99b01cf6">More...</a><br /></td></tr>
 <tr class="separator:a7bb4df4d26ee69fa561af98f99b01cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -272,7 +305,10 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:afaf2d1ce786ccc4d9fc9643a92adfb31 inherit pro_static_attribs_class_actor"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_log.html">Log</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#afaf2d1ce786ccc4d9fc9643a92adfb31">log</a></td></tr>
 <tr class="separator:afaf2d1ce786ccc4d9fc9643a92adfb31 inherit pro_static_attribs_class_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents the player's character. </p>
+<dl class="section author"><dt>Author</dt><dd>Andrew Socha </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a28a4c2e0dc3bc30cf43b5a5d1b1346b1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -296,7 +332,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Create a player that is loaded from a saved game</p>
+
+<p>Create a player that is loaded from a saved game. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">world</td><td>the current game world </td></tr>
@@ -330,7 +367,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Create a new player for a new game world</p>
+
+<p>Create a new player for a new game world. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">world</td><td>the current game world </td></tr>
@@ -353,7 +391,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Destructor: delete the player's inventory </p>
+
+<p>Destructor: delete the player's inventory. </p>
 
 </div>
 </div>
@@ -389,7 +428,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The player dies and the game ends</p>
+
+<p>The player dies and the game ends. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cell</td><td>the cell where the player is located </td></tr>
@@ -423,7 +463,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Does everything that happens every turn of the game</p>
+
+<p>Does everything that happens every turn of the game. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">world</td><td>the current game world </td></tr>
@@ -454,7 +495,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gain experience for killing a monster. Level up if enough experience is gained. Increase stats on level up.</p>
+
+<p>Gain experience for killing a monster. </p>
+<p>Level up if enough experience is gained. Increase stats on level up.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">xp</td><td>the experience gained (1-9) </td></tr>
@@ -485,7 +528,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Create the pickups and spells tables and set player data that is always the same</p>
+
+<p>Create the pickups and spells tables and set player data that is always the same. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">world</td><td>the current game world </td></tr>
@@ -532,7 +576,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p><a class="el" href="class_player.html">Player</a> movement or attacking (called by movePlayer)</p>
+
+<p><a class="el" href="class_player.html" title="Represents the player&#39;s character. ">Player</a> movement or attacking (called by movePlayer) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">world</td><td>the current game world </td></tr>
@@ -557,7 +602,9 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Check if player pressed a movement key. Also renders the player's stats and inventory.</p>
+
+<p>Check if player pressed a movement key. </p>
+<p>Also renders the player's stats and inventory.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">world</td><td>the current game world </td></tr>
@@ -590,7 +637,9 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The player picks up an item, placing it in his/her inventory. Alternately, the player opens a chest, receiving a bunch of items.</p>
+
+<p>The player picks up an item, placing it in his/her inventory. </p>
+<p>Alternately, the player opens a chest, receiving a bunch of items.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cell</td><td>the cell the player is standing on </td></tr>
@@ -622,7 +671,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Places the player at the first empty tile in the world</p>
+
+<p>Places the player at the first empty tile in the world. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">world</td><td>the current game world </td></tr>
@@ -663,7 +713,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The player purchases an item from the shop</p>
+
+<p>The player purchases an item from the shop. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">world</td><td>the current game world </td></tr>
@@ -696,7 +747,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Reduce the durability of either the player's weapon or his/her armor pieces and break the item if the durability is zero</p>
+
+<p>Reduce the durability of either the player's weapon or his/her armor pieces and break the item if the durability is zero. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">slot</td><td>the location of the item in the equipped items array (0-2) </td></tr>
@@ -727,7 +779,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Render the player's stats, spells, and inventory, as well as the game timer in speed run mode</p>
+
+<p>Render the player's stats, spells, and inventory, as well as the game timer in speed run mode. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">world</td><td>the current game world </td></tr>
@@ -759,7 +812,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Render the mouseover inventory highlight and mouseover tooltip</p>
+
+<p>Render the mouseover inventory highlight and mouseover tooltip. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">world</td><td>the current game world </td></tr>
@@ -791,7 +845,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Render the shop</p>
+
+<p>Render the shop. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">world</td><td>the current game world </td></tr>
@@ -814,7 +869,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Save the current game to file</p>
+
+<p>Save the current game to file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">world</td><td>the current game world </td></tr>
@@ -855,7 +911,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The player sells an item to the shop</p>
+
+<p>The player sells an item to the shop. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">world</td><td>the current game world </td></tr>
@@ -897,7 +954,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Slowly expire the player's attack/defense potions over 100 turns</p>
+
+<p>Slowly expire the player's attack/defense potions over 100 turns. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">timer</td><td>a reference to either the defense timer or attack timer </td></tr>
@@ -939,7 +997,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The player unequips an item at a certain location in his/her inventory</p>
+
+<p>The player unequips an item at a certain location in his/her inventory. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">item</td><td>the location of the item in the inventory (0-17) </td></tr>
@@ -981,7 +1040,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Update the visibility variable on all tiles near the player that are in line of sight such that the player only sees nearby tiles</p>
+
+<p>Update the visibility variable on all tiles near the player that are in line of sight such that the player only sees nearby tiles. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">world</td><td>the current game world </td></tr>
@@ -1013,7 +1073,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The player uses an item at a certain location in his/her inventory or casts a spell</p>
+
+<p>The player uses an item at a certain location in his/her inventory or casts a spell. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">item</td><td>the location of the item/spell in the inventory (spells are -12 to -7, items 0-17) </td></tr>
@@ -1047,7 +1108,8 @@ template&lt;class T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Write data out to a file in an endianness-agnostic manner</p>
+
+<p>Write data out to a file in an endianness-agnostic manner. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">object</td><td>the data that we are writing to file </td></tr>
@@ -1448,7 +1510,7 @@ template&lt;class T &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_player.html">Player</a></li>
-    <li class="footer">Generated on Fri May 9 2014 15:19:01 for Roguelike Game by
+    <li class="footer">Generated on Sun May 11 2014 15:48:06 for Roguelike Game by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

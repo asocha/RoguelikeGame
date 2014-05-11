@@ -31,6 +31,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Roguelike Game
    </div>
+   <div id="projectbrief">A Roguelike Game: Kill monsters, collect loot!</div>
   </td>
  </tr>
  </tbody>
@@ -111,19 +112,26 @@ $(document).ready(function(){initNavTree('class_pickup_def.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Defines properties of pickups that are the same for all pickups of that type.  
+ <a href="class_pickup_def.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_pickup_def_8h_source.html">PickupDef.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad8e5e37c2bbb8b37886a62b861514d56"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pickup_def.html#ad8e5e37c2bbb8b37886a62b861514d56">PickupDef</a> ()</td></tr>
+<tr class="memdesc:ad8e5e37c2bbb8b37886a62b861514d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor.  <a href="#ad8e5e37c2bbb8b37886a62b861514d56">More...</a><br /></td></tr>
 <tr class="separator:ad8e5e37c2bbb8b37886a62b861514d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a293ae4c0496c500eb15f2f9420f007"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pickup_def.html#a1a293ae4c0496c500eb15f2f9420f007">PickupDef</a> (int <a class="el" href="class_pickup_def.html#a3ebf67a6053858b5642beb4a7098309f">tile</a>, string <a class="el" href="class_pickup_def.html#a9edc11250a01a7bac89e2834e43acd77">name</a>, string <a class="el" href="class_pickup_def.html#a21790e5496026d09d77dca9645eba633">description</a>, int <a class="el" href="class_pickup_def.html#ac235cffbe0300491883a76846e53ccaa">equipSlot</a>, <a class="el" href="class_dice.html">Dice</a> <a class="el" href="class_pickup_def.html#a22427a2b360359cb5eefdb4605df4df0">durability</a>, double <a class="el" href="class_pickup_def.html#a8c188b9a238729a00ee76af41106991b">basePrice</a>, int <a class="el" href="class_pickup_def.html#a2c0171b9e833dfe0ffeeff946d0335de">difficulty</a>, function&lt; void()&gt; <a class="el" href="class_pickup_def.html#a3bec427561dbdc510e4fa54bfa8e06f4">onUse</a>, function&lt; void()&gt; <a class="el" href="class_pickup_def.html#a2c403b1a9e27d3d522cdd7412933adce">onUnequip</a>)</td></tr>
+<tr class="memdesc:a1a293ae4c0496c500eb15f2f9420f007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an item definition, which includes all the information on a specific item type that is the same for all instances of that item.  <a href="#a1a293ae4c0496c500eb15f2f9420f007">More...</a><br /></td></tr>
 <tr class="separator:a1a293ae4c0496c500eb15f2f9420f007"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef9677ea65b53c40bd07d5c58b522e5a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pickup_def.html#aef9677ea65b53c40bd07d5c58b522e5a">~PickupDef</a> ()</td></tr>
 <tr class="separator:aef9677ea65b53c40bd07d5c58b522e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77bc8279df7ab117c3d884e5ed261d39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pickup_def.html#a77bc8279df7ab117c3d884e5ed261d39">use</a> ()</td></tr>
+<tr class="memdesc:a77bc8279df7ab117c3d884e5ed261d39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate an item by calling its onUse function.  <a href="#a77bc8279df7ab117c3d884e5ed261d39">More...</a><br /></td></tr>
 <tr class="separator:a77bc8279df7ab117c3d884e5ed261d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28394303fd3a44f853c561e844df96e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pickup_def.html#a28394303fd3a44f853c561e844df96e9">unequip</a> ()</td></tr>
+<tr class="memdesc:a28394303fd3a44f853c561e844df96e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unequip an item by calling its onUnequip function.  <a href="#a28394303fd3a44f853c561e844df96e9">More...</a><br /></td></tr>
 <tr class="separator:a28394303fd3a44f853c561e844df96e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1dfcf57b5694f21f300b236e0efffff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pickup_def.html#aa1dfcf57b5694f21f300b236e0efffff">getTile</a> () const </td></tr>
 <tr class="separator:aa1dfcf57b5694f21f300b236e0efffff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,6 +142,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a43d7190af898fafff625f76885ff9492"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pickup_def.html#a43d7190af898fafff625f76885ff9492">getDescription</a> () const </td></tr>
 <tr class="separator:a43d7190af898fafff625f76885ff9492"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1660623c7f94f8b7d683ebb59b0cb57a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pickup_def.html#a1660623c7f94f8b7d683ebb59b0cb57a">getDurability</a> () const </td></tr>
+<tr class="memdesc:a1660623c7f94f8b7d683ebb59b0cb57a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roll an item type's durability dice to get an item's initial durability.  <a href="#a1660623c7f94f8b7d683ebb59b0cb57a">More...</a><br /></td></tr>
 <tr class="separator:a1660623c7f94f8b7d683ebb59b0cb57a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3319a566f687a5407ae0d82e69f1ce8a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pickup_def.html#a3319a566f687a5407ae0d82e69f1ce8a">getBasePrice</a> () const </td></tr>
 <tr class="separator:a3319a566f687a5407ae0d82e69f1ce8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,7 +170,10 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a2c403b1a9e27d3d522cdd7412933adce"><td class="memItemLeft" align="right" valign="top">function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pickup_def.html#a2c403b1a9e27d3d522cdd7412933adce">onUnequip</a></td></tr>
 <tr class="separator:a2c403b1a9e27d3d522cdd7412933adce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Defines properties of pickups that are the same for all pickups of that type. </p>
+<dl class="section author"><dt>Author</dt><dd>Andrew Socha </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ad8e5e37c2bbb8b37886a62b861514d56"></a>
 <div class="memitem">
 <div class="memproto">
@@ -174,7 +186,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Default Constructor </p>
+
+<p>Default Constructor. </p>
 
 </div>
 </div>
@@ -243,7 +256,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates an item definition, which includes all the information on a specific item type that is the same for all instances of that item</p>
+
+<p>Creates an item definition, which includes all the information on a specific item type that is the same for all instances of that item. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tile</td><td>the tile number of the tile used to render that item </td></tr>
@@ -334,7 +348,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Roll an item type's durability dice to get an item's initial durability</p>
+
+<p>Roll an item type's durability dice to get an item's initial durability. </p>
 <dl class="section return"><dt>Returns</dt><dd>the initial durability for an item </dd></dl>
 
 </div>
@@ -396,7 +411,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Unequip an item by calling its onUnequip function </p>
+
+<p>Unequip an item by calling its onUnequip function. </p>
 
 </div>
 </div>
@@ -412,7 +428,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Activate an item by calling its onUse function </p>
+
+<p>Activate an item by calling its onUse function. </p>
 
 </div>
 </div>
@@ -607,7 +624,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_pickup_def.html">PickupDef</a></li>
-    <li class="footer">Generated on Fri May 9 2014 15:19:01 for Roguelike Game by
+    <li class="footer">Generated on Sun May 11 2014 15:48:06 for Roguelike Game by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

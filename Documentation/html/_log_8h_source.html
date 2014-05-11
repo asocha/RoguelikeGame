@@ -31,6 +31,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Roguelike Game
    </div>
+   <div id="projectbrief">A Roguelike Game: Kill monsters, collect loot!</div>
   </td>
  </tr>
  </tbody>
@@ -104,8 +105,8 @@ $(document).ready(function(){initNavTree('_log_8h_source.html','');});
 <div class="title">Log.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_log_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//Implements a combat log that is printed to the bottom of the page</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<a href="_log_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;tilelib.h&quot;</span></div>
@@ -124,29 +125,29 @@ $(document).ready(function(){initNavTree('_log_8h_source.html','');});
 <div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="_log_8h.html#a815d9675600301bf6cb4375dde7429bc">   18</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="_log_8h.html#a815d9675600301bf6cb4375dde7429bc">background</a> = 0xFFFFFF44;</div>
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="_log_8h.html#a658d4c5cc3df1dc2ac2d0d2ad30a9041">   19</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="_log_8h.html#a658d4c5cc3df1dc2ac2d0d2ad30a9041">difficultyColors</a>[3] = {<a class="code" href="_log_8h.html#a31f71ef81bebefda1480af2eb15834a4">green</a>, <a class="code" href="_log_8h.html#aed4735d27b5959d71255c0e4f10423df">yellow</a>, <a class="code" href="_log_8h.html#a8248c83ebc25e21d52476a48bb85f4b5">orange</a>};</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_log.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_log.html">Log</a>{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="class_log.html">Log</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        ~<a class="code" href="class_log.html">Log</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">void</span> print(<span class="keywordtype">string</span> text, <span class="keywordtype">int</span> color, <span class="keywordtype">int</span> turn);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">string</span> addArticle(<span class="keywordtype">string</span> word, <span class="keywordtype">bool</span> caps) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        vector&lt;tuple&lt;string, int, int&gt;&gt;&amp; getLog();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_log.html#ac4bd937b54050491fe7e6f39fc4b3f14">   31</a></span>&#160;        vector&lt;tuple&lt;string, int, int&gt;&gt; <a class="code" href="class_log.html#ac4bd937b54050491fe7e6f39fc4b3f14">log</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_log.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_log.html">Log</a>{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="class_log.html">Log</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        ~<a class="code" href="class_log.html">Log</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">void</span> print(<span class="keywordtype">string</span> text, <span class="keywordtype">int</span> color, <span class="keywordtype">int</span> turn);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">string</span> addArticle(<span class="keywordtype">string</span> word, <span class="keywordtype">bool</span> caps) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        vector&lt;tuple&lt;string, int, int&gt;&gt;&amp; getLog();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_log.html#ac4bd937b54050491fe7e6f39fc4b3f14">   36</a></span>&#160;        vector&lt;tuple&lt;string, int, int&gt;&gt; <a class="code" href="class_log.html#ac4bd937b54050491fe7e6f39fc4b3f14">log</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
 <div class="ttc" id="_log_8h_html_a658d4c5cc3df1dc2ac2d0d2ad30a9041"><div class="ttname"><a href="_log_8h.html#a658d4c5cc3df1dc2ac2d0d2ad30a9041">difficultyColors</a></div><div class="ttdeci">const int difficultyColors[3]</div><div class="ttdef"><b>Definition:</b> Log.h:19</div></div>
 <div class="ttc" id="_log_8h_html_a8248c83ebc25e21d52476a48bb85f4b5"><div class="ttname"><a href="_log_8h.html#a8248c83ebc25e21d52476a48bb85f4b5">orange</a></div><div class="ttdeci">const int orange</div><div class="ttdef"><b>Definition:</b> Log.h:13</div></div>
 <div class="ttc" id="_log_8h_html_a5af4ffa730b8355db2d12a9bf125e430"><div class="ttname"><a href="_log_8h.html#a5af4ffa730b8355db2d12a9bf125e430">equippedYellow</a></div><div class="ttdeci">const int equippedYellow</div><div class="ttdef"><b>Definition:</b> Log.h:16</div></div>
-<div class="ttc" id="class_log_html_ac4bd937b54050491fe7e6f39fc4b3f14"><div class="ttname"><a href="class_log.html#ac4bd937b54050491fe7e6f39fc4b3f14">Log::log</a></div><div class="ttdeci">vector&lt; tuple&lt; string, int, int &gt; &gt; log</div><div class="ttdef"><b>Definition:</b> Log.h:31</div></div>
+<div class="ttc" id="class_log_html_ac4bd937b54050491fe7e6f39fc4b3f14"><div class="ttname"><a href="class_log.html#ac4bd937b54050491fe7e6f39fc4b3f14">Log::log</a></div><div class="ttdeci">vector&lt; tuple&lt; string, int, int &gt; &gt; log</div><div class="ttdef"><b>Definition:</b> Log.h:36</div></div>
 <div class="ttc" id="_log_8h_html_ae7af33635e8755cea0f23fcfe5e0fd46"><div class="ttname"><a href="_log_8h.html#ae7af33635e8755cea0f23fcfe5e0fd46">cantAffordRed</a></div><div class="ttdeci">const int cantAffordRed</div><div class="ttdef"><b>Definition:</b> Log.h:11</div></div>
 <div class="ttc" id="_log_8h_html_a31f71ef81bebefda1480af2eb15834a4"><div class="ttname"><a href="_log_8h.html#a31f71ef81bebefda1480af2eb15834a4">green</a></div><div class="ttdeci">const int green</div><div class="ttdef"><b>Definition:</b> Log.h:14</div></div>
 <div class="ttc" id="_log_8h_html_ac0b8668b66ca66382699f854f1269557"><div class="ttname"><a href="_log_8h.html#ac0b8668b66ca66382699f854f1269557">white</a></div><div class="ttdeci">const int white</div><div class="ttdef"><b>Definition:</b> Log.h:17</div></div>
 <div class="ttc" id="_log_8h_html_aed4735d27b5959d71255c0e4f10423df"><div class="ttname"><a href="_log_8h.html#aed4735d27b5959d71255c0e4f10423df">yellow</a></div><div class="ttdeci">const int yellow</div><div class="ttdef"><b>Definition:</b> Log.h:12</div></div>
 <div class="ttc" id="_log_8h_html_a9013d1cc135c15bef6659af5137bc90f"><div class="ttname"><a href="_log_8h.html#a9013d1cc135c15bef6659af5137bc90f">blue</a></div><div class="ttdeci">const int blue</div><div class="ttdef"><b>Definition:</b> Log.h:15</div></div>
 <div class="ttc" id="_log_8h_html_acc219f2d5d3684a01f7beb2a01f3bb19"><div class="ttname"><a href="_log_8h.html#acc219f2d5d3684a01f7beb2a01f3bb19">red</a></div><div class="ttdeci">const int red</div><div class="ttdef"><b>Definition:</b> Log.h:10</div></div>
-<div class="ttc" id="class_log_html"><div class="ttname"><a href="class_log.html">Log</a></div><div class="ttdef"><b>Definition:</b> Log.h:21</div></div>
+<div class="ttc" id="class_log_html"><div class="ttname"><a href="class_log.html">Log</a></div><div class="ttdoc">Implements a combat log that is printed to the bottom of the page. </div><div class="ttdef"><b>Definition:</b> Log.h:26</div></div>
 <div class="ttc" id="_log_8h_html_a815d9675600301bf6cb4375dde7429bc"><div class="ttname"><a href="_log_8h.html#a815d9675600301bf6cb4375dde7429bc">background</a></div><div class="ttdeci">const int background</div><div class="ttdef"><b>Definition:</b> Log.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -154,7 +155,7 @@ $(document).ready(function(){initNavTree('_log_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_f7c8f6fb9f8a0fa9c300dea72fda1a15.html">Visual Studio 2010</a></li><li class="navelem"><a class="el" href="dir_5f240f04451bb9cd4c6b67d0dababe02.html">Projects</a></li><li class="navelem"><a class="el" href="dir_1f58244af4c7068a1b02cf49941b76d6.html">Game</a></li><li class="navelem"><a class="el" href="dir_27a10d9f4a9b69a5515a4bf1ddb24f81.html">Game</a></li><li class="navelem"><a class="el" href="_log_8h.html">Log.h</a></li>
-    <li class="footer">Generated on Fri May 9 2014 15:19:01 for Roguelike Game by
+    <li class="footer">Generated on Sun May 11 2014 15:48:06 for Roguelike Game by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

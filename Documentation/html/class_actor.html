@@ -31,6 +31,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Roguelike Game
    </div>
+   <div id="projectbrief">A Roguelike Game: Kill monsters, collect loot!</div>
   </td>
  </tr>
  </tbody>
@@ -115,6 +116,9 @@ $(document).ready(function(){initNavTree('class_actor.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Defines an <a class="el" href="class_actor.html" title="Defines an Actor, which can be a monster, player, or any other character I wish to add in the future...">Actor</a>, which can be a monster, player, or any other character I wish to add in the future.  
+ <a href="class_actor.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_actor_8h_source.html">Actor.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Actor:</div>
@@ -122,23 +126,28 @@ Inheritance diagram for Actor:</div>
  <div class="center">
   <img src="class_actor.png" usemap="#Actor_map" alt=""/>
   <map id="Actor_map" name="Actor_map">
-<area href="class_player.html" alt="Player" shape="rect" coords="0,56,49,80"/>
+<area href="class_player.html" title="Represents the player&#39;s character. " alt="Player" shape="rect" coords="0,56,49,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2a0ff4335a1ee9096df90f288c026c8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#a2a0ff4335a1ee9096df90f288c026c8b">Actor</a> ()</td></tr>
+<tr class="memdesc:a2a0ff4335a1ee9096df90f288c026c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor: used by the player actor.  <a href="#a2a0ff4335a1ee9096df90f288c026c8b">More...</a><br /></td></tr>
 <tr class="separator:a2a0ff4335a1ee9096df90f288c026c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13ae0e2747587d5ddcb11f1ec54c123a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#a13ae0e2747587d5ddcb11f1ec54c123a">Actor</a> (<a class="el" href="_coord_8h.html#aa739a91f3d4a780958638ca29bd103c0">Coordint</a> <a class="el" href="class_actor.html#a0f2bb49cd93921e5697e52f541e47080">location</a>, int levelDifficulty)</td></tr>
+<tr class="memdesc:a13ae0e2747587d5ddcb11f1ec54c123a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new monster for the game.  <a href="#a13ae0e2747587d5ddcb11f1ec54c123a">More...</a><br /></td></tr>
 <tr class="separator:a13ae0e2747587d5ddcb11f1ec54c123a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67124cf8b1c71f2021de4648bd0da79a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#a67124cf8b1c71f2021de4648bd0da79a">Actor</a> (int <a class="el" href="class_actor.html#a23f1984441d3ac3b80955595181e6f80">defNumber</a>, int <a class="el" href="class_actor.html#a53164b4548b75df49da90fc69dccdbd2">chaseCount</a>, int health)</td></tr>
+<tr class="memdesc:a67124cf8b1c71f2021de4648bd0da79a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a monster that is loaded from a saved game.  <a href="#a67124cf8b1c71f2021de4648bd0da79a">More...</a><br /></td></tr>
 <tr class="separator:a67124cf8b1c71f2021de4648bd0da79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad807fe8f85e72ab263a0c05e3231cb39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#ad807fe8f85e72ab263a0c05e3231cb39">~Actor</a> ()</td></tr>
 <tr class="separator:ad807fe8f85e72ab263a0c05e3231cb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3325fd25aa4d89ef0f64db1ad914c61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#ad3325fd25aa4d89ef0f64db1ad914c61">attack</a> (<a class="el" href="class_actor.html">Actor</a> &amp;target, <a class="el" href="class_cell.html">Cell</a> &amp;cell, <a class="el" href="class_world.html">World</a> &amp;world)</td></tr>
+<tr class="memdesc:ad3325fd25aa4d89ef0f64db1ad914c61"><td class="mdescLeft">&#160;</td><td class="mdescRight">This actor attacks another actor, dealing damage to it.  <a href="#ad3325fd25aa4d89ef0f64db1ad914c61">More...</a><br /></td></tr>
 <tr class="separator:ad3325fd25aa4d89ef0f64db1ad914c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11b460aeae8141cb1ef8e6f8e51f11e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#a11b460aeae8141cb1ef8e6f8e51f11e8">incrementChaseCount</a> ()</td></tr>
+<tr class="memdesc:a11b460aeae8141cb1ef8e6f8e51f11e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase a monster's chase count by 1.  <a href="#a11b460aeae8141cb1ef8e6f8e51f11e8">More...</a><br /></td></tr>
 <tr class="separator:a11b460aeae8141cb1ef8e6f8e51f11e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b25204e5e3dc08b016c795977edb0e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#a0b25204e5e3dc08b016c795977edb0e2">getTile</a> () const </td></tr>
 <tr class="separator:a0b25204e5e3dc08b016c795977edb0e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,6 +166,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acf07ff039272721cf239d357becfe9d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_coord_8h.html#aa739a91f3d4a780958638ca29bd103c0">Coordint</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#acf07ff039272721cf239d357becfe9d8">getHome</a> ()</td></tr>
 <tr class="separator:acf07ff039272721cf239d357becfe9d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3d8f661e0e85d13c9cded2b5b167b11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#ad3d8f661e0e85d13c9cded2b5b167b11">setHome</a> (<a class="el" href="_coord_8h.html#aa739a91f3d4a780958638ca29bd103c0">Coordint</a> &amp;<a class="el" href="class_actor.html#a8d031c7e55ff3240e7c94e3bd20cfe19">home</a>)</td></tr>
+<tr class="memdesc:ad3d8f661e0e85d13c9cded2b5b167b11"><td class="mdescLeft">&#160;</td><td class="mdescRight">A monster gets a new home, resetting its chase count.  <a href="#ad3d8f661e0e85d13c9cded2b5b167b11">More...</a><br /></td></tr>
 <tr class="separator:ad3d8f661e0e85d13c9cded2b5b167b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -189,6 +199,7 @@ Static Protected Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:af78ccdab6cdcfa0848d40851b09dfa5c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#af78ccdab6cdcfa0848d40851b09dfa5c">die</a> (<a class="el" href="class_cell.html">Cell</a> &amp;cell, <a class="el" href="class_world.html">World</a> &amp;world)</td></tr>
+<tr class="memdesc:af78ccdab6cdcfa0848d40851b09dfa5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A monster dies and is removed from the world.  <a href="#af78ccdab6cdcfa0848d40851b09dfa5c">More...</a><br /></td></tr>
 <tr class="separator:af78ccdab6cdcfa0848d40851b09dfa5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -198,7 +209,10 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a53164b4548b75df49da90fc69dccdbd2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_actor.html#a53164b4548b75df49da90fc69dccdbd2">chaseCount</a></td></tr>
 <tr class="separator:a53164b4548b75df49da90fc69dccdbd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Defines an <a class="el" href="class_actor.html" title="Defines an Actor, which can be a monster, player, or any other character I wish to add in the future...">Actor</a>, which can be a monster, player, or any other character I wish to add in the future. </p>
+<dl class="section author"><dt>Author</dt><dd>Andrew Socha </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a2a0ff4335a1ee9096df90f288c026c8b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -211,7 +225,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Default Constructor: used by the player actor </p>
+
+<p>Default Constructor: used by the player actor. </p>
 
 </div>
 </div>
@@ -238,7 +253,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates a new monster for the game</p>
+
+<p>Creates a new monster for the game. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">location</td><td>the initial location of the monster </td></tr>
@@ -278,10 +294,11 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates a monster that is loaded from a saved game</p>
+
+<p>Creates a monster that is loaded from a saved game. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">defNumber</td><td>the index of the <a class="el" href="class_actor_def.html">ActorDef</a> for this monster type </td></tr>
+    <tr><td class="paramname">defNumber</td><td>the index of the <a class="el" href="class_actor_def.html" title="Defines an Actor type that all Actors of that type share. ">ActorDef</a> for this monster type </td></tr>
     <tr><td class="paramname">chaseCount</td><td>how many steps this monster has taken chasing the player </td></tr>
     <tr><td class="paramname">health</td><td>the current health of the monster </td></tr>
   </table>
@@ -335,7 +352,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This actor attacks another actor, dealing damage to it</p>
+
+<p>This actor attacks another actor, dealing damage to it. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">target</td><td>a referense to the actor we are attacking </td></tr>
@@ -378,7 +396,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>A monster dies and is removed from the world</p>
+
+<p>A monster dies and is removed from the world. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cell</td><td>the cell where the monster is located </td></tr>
@@ -546,7 +565,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Increase a monster's chase count by 1 </p>
+
+<p>Increase a monster's chase count by 1. </p>
 
 </div>
 </div>
@@ -563,7 +583,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>A monster gets a new home, resetting its chase count</p>
+
+<p>A monster gets a new home, resetting its chase count. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">home</td><td>the location of the monster's new home </td></tr>
@@ -785,7 +806,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_actor.html">Actor</a></li>
-    <li class="footer">Generated on Fri May 9 2014 15:19:01 for Roguelike Game by
+    <li class="footer">Generated on Sun May 11 2014 15:48:06 for Roguelike Game by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

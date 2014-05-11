@@ -31,6 +31,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Roguelike Game
    </div>
+   <div id="projectbrief">A Roguelike Game: Kill monsters, collect loot!</div>
   </td>
  </tr>
  </tbody>
@@ -104,63 +105,62 @@ $(document).ready(function(){initNavTree('_cell_8h_source.html','');});
 <div class="title">Cell.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_cell_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//Cell: a piece of the world</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">class </span><a class="code" href="class_pickup.html">Pickup</a>;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">class </span><a class="code" href="class_actor.html">Actor</a>;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_cell.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cell.html">Cell</a>{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="class_cell.html">Cell</a>();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="class_cell.html">Cell</a>(<span class="keywordtype">string</span> type, <span class="keywordtype">int</span> tile);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        ~<a class="code" href="class_cell.html">Cell</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">void</span> setType(<span class="keywordtype">string</span> type);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">string</span> getType() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">void</span> setTile(<span class="keywordtype">int</span> tile);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">int</span> getTile() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">void</span> setZone(<span class="keywordtype">int</span> zone);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">int</span> getZone() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">void</span> setVisibility(<span class="keywordtype">int</span> visibility);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">int</span> getVisibility() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> setActor(<a class="code" href="class_actor.html">Actor</a>* actor);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="class_actor.html">Actor</a>* getActor() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">void</span> setPickup(<a class="code" href="class_pickup.html">Pickup</a>* pickup);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="class_pickup.html">Pickup</a>* getPickup() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_cell.html#af52507688c2661bff7396ff005c0c414">   35</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="class_cell.html#af52507688c2661bff7396ff005c0c414">type</a>; <span class="comment">//wall, empty, etc</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_cell.html#a3b588d29d47b94459533f514cb534542">   36</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_cell.html#a3b588d29d47b94459533f514cb534542">tile</a>; <span class="comment">//tile number from tiles.png</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_cell.html#a3576601c13c836586b6cc1a4b6fdad57">   37</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_cell.html#a3576601c13c836586b6cc1a4b6fdad57">zone</a>; <span class="comment">//used to find largest set of empty tiles</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_cell.html#acc5ec89e9664ed4f9172670ccae74a93">   38</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_cell.html#acc5ec89e9664ed4f9172670ccae74a93">visibility</a>; <span class="comment">//0 = fully hidden, 1 = all but monsters visible, 2 = fully visible</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_cell.html#ab3acb66fe43d1c80ed39d484a8a06c11">   39</a></span>&#160;        <a class="code" href="class_actor.html">Actor</a>* <a class="code" href="class_cell.html#ab3acb66fe43d1c80ed39d484a8a06c11">actor</a>; <span class="comment">//the monster, player, etc. at this tile</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_cell.html#a58387333b6d1b81fbc86583b0386cb3c">   40</a></span>&#160;        <a class="code" href="class_pickup.html">Pickup</a>* <a class="code" href="class_cell.html#a58387333b6d1b81fbc86583b0386cb3c">pickup</a>; <span class="comment">//an item at this location</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
-<div class="ttc" id="class_cell_html_a3576601c13c836586b6cc1a4b6fdad57"><div class="ttname"><a href="class_cell.html#a3576601c13c836586b6cc1a4b6fdad57">Cell::zone</a></div><div class="ttdeci">int zone</div><div class="ttdef"><b>Definition:</b> Cell.h:37</div></div>
-<div class="ttc" id="class_cell_html"><div class="ttname"><a href="class_cell.html">Cell</a></div><div class="ttdef"><b>Definition:</b> Cell.h:10</div></div>
-<div class="ttc" id="class_pickup_html"><div class="ttname"><a href="class_pickup.html">Pickup</a></div><div class="ttdef"><b>Definition:</b> Pickup.h:8</div></div>
-<div class="ttc" id="class_cell_html_ab3acb66fe43d1c80ed39d484a8a06c11"><div class="ttname"><a href="class_cell.html#ab3acb66fe43d1c80ed39d484a8a06c11">Cell::actor</a></div><div class="ttdeci">Actor * actor</div><div class="ttdef"><b>Definition:</b> Cell.h:39</div></div>
-<div class="ttc" id="class_actor_html"><div class="ttname"><a href="class_actor.html">Actor</a></div><div class="ttdef"><b>Definition:</b> Actor.h:13</div></div>
-<div class="ttc" id="class_cell_html_af52507688c2661bff7396ff005c0c414"><div class="ttname"><a href="class_cell.html#af52507688c2661bff7396ff005c0c414">Cell::type</a></div><div class="ttdeci">string type</div><div class="ttdef"><b>Definition:</b> Cell.h:35</div></div>
-<div class="ttc" id="class_cell_html_acc5ec89e9664ed4f9172670ccae74a93"><div class="ttname"><a href="class_cell.html#acc5ec89e9664ed4f9172670ccae74a93">Cell::visibility</a></div><div class="ttdeci">int visibility</div><div class="ttdef"><b>Definition:</b> Cell.h:38</div></div>
-<div class="ttc" id="class_cell_html_a58387333b6d1b81fbc86583b0386cb3c"><div class="ttname"><a href="class_cell.html#a58387333b6d1b81fbc86583b0386cb3c">Cell::pickup</a></div><div class="ttdeci">Pickup * pickup</div><div class="ttdef"><b>Definition:</b> Cell.h:40</div></div>
-<div class="ttc" id="class_cell_html_a3b588d29d47b94459533f514cb534542"><div class="ttname"><a href="class_cell.html#a3b588d29d47b94459533f514cb534542">Cell::tile</a></div><div class="ttdeci">int tile</div><div class="ttdef"><b>Definition:</b> Cell.h:36</div></div>
+<a href="_cell_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">class </span><a class="code" href="class_pickup.html">Pickup</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">class </span><a class="code" href="class_actor.html">Actor</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_cell.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cell.html">Cell</a>{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="class_cell.html">Cell</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="class_cell.html">Cell</a>(<span class="keywordtype">string</span> type, <span class="keywordtype">int</span> tile);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        ~<a class="code" href="class_cell.html">Cell</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">void</span> setType(<span class="keywordtype">string</span> type);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">string</span> getType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> setTile(<span class="keywordtype">int</span> tile);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">int</span> getTile() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">void</span> setZone(<span class="keywordtype">int</span> zone);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">int</span> getZone() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">void</span> setVisibility(<span class="keywordtype">int</span> visibility);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">int</span> getVisibility() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">void</span> setActor(<a class="code" href="class_actor.html">Actor</a>* actor);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="class_actor.html">Actor</a>* getActor() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">void</span> setPickup(<a class="code" href="class_pickup.html">Pickup</a>* pickup);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="class_pickup.html">Pickup</a>* getPickup() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_cell.html#af52507688c2661bff7396ff005c0c414">   39</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="class_cell.html#af52507688c2661bff7396ff005c0c414">type</a>; <span class="comment">//wall, empty, etc</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_cell.html#a3b588d29d47b94459533f514cb534542">   40</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_cell.html#a3b588d29d47b94459533f514cb534542">tile</a>; <span class="comment">//tile number from tiles.png</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_cell.html#a3576601c13c836586b6cc1a4b6fdad57">   41</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_cell.html#a3576601c13c836586b6cc1a4b6fdad57">zone</a>; <span class="comment">//used to find largest set of empty tiles</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_cell.html#acc5ec89e9664ed4f9172670ccae74a93">   42</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_cell.html#acc5ec89e9664ed4f9172670ccae74a93">visibility</a>; <span class="comment">//0 = fully hidden, 1 = all but monsters visible, 2 = fully visible</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_cell.html#ab3acb66fe43d1c80ed39d484a8a06c11">   43</a></span>&#160;        <a class="code" href="class_actor.html">Actor</a>* <a class="code" href="class_cell.html#ab3acb66fe43d1c80ed39d484a8a06c11">actor</a>; <span class="comment">//the monster, player, etc. at this tile</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_cell.html#a58387333b6d1b81fbc86583b0386cb3c">   44</a></span>&#160;        <a class="code" href="class_pickup.html">Pickup</a>* <a class="code" href="class_cell.html#a58387333b6d1b81fbc86583b0386cb3c">pickup</a>; <span class="comment">//an item at this location</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
+<div class="ttc" id="class_cell_html_a3576601c13c836586b6cc1a4b6fdad57"><div class="ttname"><a href="class_cell.html#a3576601c13c836586b6cc1a4b6fdad57">Cell::zone</a></div><div class="ttdeci">int zone</div><div class="ttdef"><b>Definition:</b> Cell.h:41</div></div>
+<div class="ttc" id="class_cell_html"><div class="ttname"><a href="class_cell.html">Cell</a></div><div class="ttdoc">Represents a single piece of the world. </div><div class="ttdef"><b>Definition:</b> Cell.h:14</div></div>
+<div class="ttc" id="class_pickup_html"><div class="ttname"><a href="class_pickup.html">Pickup</a></div><div class="ttdoc">Defines an item that the player can pick up and use in the game. </div><div class="ttdef"><b>Definition:</b> Pickup.h:12</div></div>
+<div class="ttc" id="class_cell_html_ab3acb66fe43d1c80ed39d484a8a06c11"><div class="ttname"><a href="class_cell.html#ab3acb66fe43d1c80ed39d484a8a06c11">Cell::actor</a></div><div class="ttdeci">Actor * actor</div><div class="ttdef"><b>Definition:</b> Cell.h:43</div></div>
+<div class="ttc" id="class_actor_html"><div class="ttname"><a href="class_actor.html">Actor</a></div><div class="ttdoc">Defines an Actor, which can be a monster, player, or any other character I wish to add in the future...</div><div class="ttdef"><b>Definition:</b> Actor.h:17</div></div>
+<div class="ttc" id="class_cell_html_af52507688c2661bff7396ff005c0c414"><div class="ttname"><a href="class_cell.html#af52507688c2661bff7396ff005c0c414">Cell::type</a></div><div class="ttdeci">string type</div><div class="ttdef"><b>Definition:</b> Cell.h:39</div></div>
+<div class="ttc" id="class_cell_html_acc5ec89e9664ed4f9172670ccae74a93"><div class="ttname"><a href="class_cell.html#acc5ec89e9664ed4f9172670ccae74a93">Cell::visibility</a></div><div class="ttdeci">int visibility</div><div class="ttdef"><b>Definition:</b> Cell.h:42</div></div>
+<div class="ttc" id="class_cell_html_a58387333b6d1b81fbc86583b0386cb3c"><div class="ttname"><a href="class_cell.html#a58387333b6d1b81fbc86583b0386cb3c">Cell::pickup</a></div><div class="ttdeci">Pickup * pickup</div><div class="ttdef"><b>Definition:</b> Cell.h:44</div></div>
+<div class="ttc" id="class_cell_html_a3b588d29d47b94459533f514cb534542"><div class="ttname"><a href="class_cell.html#a3b588d29d47b94459533f514cb534542">Cell::tile</a></div><div class="ttdeci">int tile</div><div class="ttdef"><b>Definition:</b> Cell.h:40</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_f7c8f6fb9f8a0fa9c300dea72fda1a15.html">Visual Studio 2010</a></li><li class="navelem"><a class="el" href="dir_5f240f04451bb9cd4c6b67d0dababe02.html">Projects</a></li><li class="navelem"><a class="el" href="dir_1f58244af4c7068a1b02cf49941b76d6.html">Game</a></li><li class="navelem"><a class="el" href="dir_27a10d9f4a9b69a5515a4bf1ddb24f81.html">Game</a></li><li class="navelem"><a class="el" href="_cell_8h.html">Cell.h</a></li>
-    <li class="footer">Generated on Fri May 9 2014 15:19:01 for Roguelike Game by
+    <li class="footer">Generated on Sun May 11 2014 15:48:06 for Roguelike Game by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

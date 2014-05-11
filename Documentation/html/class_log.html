@@ -31,6 +31,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Roguelike Game
    </div>
+   <div id="projectbrief">A Roguelike Game: Kill monsters, collect loot!</div>
   </td>
  </tr>
  </tbody>
@@ -111,17 +112,24 @@ $(document).ready(function(){initNavTree('class_log.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Implements a combat log that is printed to the bottom of the page.  
+ <a href="class_log.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_log_8h_source.html">Log.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af6071a60aa52b6c1b511f99b4bc1b8fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_log.html#af6071a60aa52b6c1b511f99b4bc1b8fe">Log</a> ()</td></tr>
+<tr class="memdesc:af6071a60aa52b6c1b511f99b4bc1b8fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consuctor: Create a new combat log for the game.  <a href="#af6071a60aa52b6c1b511f99b4bc1b8fe">More...</a><br /></td></tr>
 <tr class="separator:af6071a60aa52b6c1b511f99b4bc1b8fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fbfda88fbee5027c89f6eb121059360"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_log.html#a0fbfda88fbee5027c89f6eb121059360">~Log</a> ()</td></tr>
+<tr class="memdesc:a0fbfda88fbee5027c89f6eb121059360"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a0fbfda88fbee5027c89f6eb121059360">More...</a><br /></td></tr>
 <tr class="separator:a0fbfda88fbee5027c89f6eb121059360"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5214ab641f3291c5104b565df56dfb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_log.html#aa5214ab641f3291c5104b565df56dfb1">print</a> (string text, int color, int turn)</td></tr>
+<tr class="memdesc:aa5214ab641f3291c5104b565df56dfb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print text to the log.  <a href="#aa5214ab641f3291c5104b565df56dfb1">More...</a><br /></td></tr>
 <tr class="separator:aa5214ab641f3291c5104b565df56dfb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e73a86e84f11ac89eca124451689cd5"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_log.html#a6e73a86e84f11ac89eca124451689cd5">addArticle</a> (string word, bool caps) const </td></tr>
+<tr class="memdesc:a6e73a86e84f11ac89eca124451689cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add 'a' or 'an' to the start of a word.  <a href="#a6e73a86e84f11ac89eca124451689cd5">More...</a><br /></td></tr>
 <tr class="separator:a6e73a86e84f11ac89eca124451689cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab59e2e26b22f641152488d9af402e214"><td class="memItemLeft" align="right" valign="top">vector&lt; tuple&lt; string, int, <br class="typebreak" />
 int &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_log.html#ab59e2e26b22f641152488d9af402e214">getLog</a> ()</td></tr>
@@ -132,7 +140,10 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ac4bd937b54050491fe7e6f39fc4b3f14"><td class="memItemLeft" align="right" valign="top">vector&lt; tuple&lt; string, int, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_log.html#ac4bd937b54050491fe7e6f39fc4b3f14">log</a></td></tr>
 <tr class="separator:ac4bd937b54050491fe7e6f39fc4b3f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Implements a combat log that is printed to the bottom of the page. </p>
+<dl class="section author"><dt>Author</dt><dd>Andrew Socha </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="af6071a60aa52b6c1b511f99b4bc1b8fe"></a>
 <div class="memitem">
 <div class="memproto">
@@ -145,6 +156,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Consuctor: Create a new combat log for the game. </p>
 
 </div>
@@ -161,7 +173,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Destructor </p>
+
+<p>Destructor. </p>
 
 </div>
 </div>
@@ -189,7 +202,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Add 'a' or 'an' to the start of a word</p>
+
+<p>Add 'a' or 'an' to the start of a word. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">word</td><td>the word </td></tr>
@@ -245,7 +259,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Print text to the log</p>
+
+<p>Print text to the log. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">text</td><td>the text to add to the log </td></tr>
@@ -288,7 +303,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_log.html">Log</a></li>
-    <li class="footer">Generated on Fri May 9 2014 15:19:01 for Roguelike Game by
+    <li class="footer">Generated on Sun May 11 2014 15:48:06 for Roguelike Game by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>

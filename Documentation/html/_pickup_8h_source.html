@@ -31,6 +31,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Roguelike Game
    </div>
+   <div id="projectbrief">A Roguelike Game: Kill monsters, collect loot!</div>
   </td>
  </tr>
  </tbody>
@@ -104,98 +105,97 @@ $(document).ready(function(){initNavTree('_pickup_8h_source.html','');});
 <div class="title">Pickup.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_pickup_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//Defines an item that the player can pick up and use in the game</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_pickup_def_8h.html">PickupDef.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_dice_8h.html">Dice.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_pickup.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_pickup.html">Pickup</a></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="class_pickup.html#ada76f7bbf41784488bcca19e38487e0a">Pickup</a>(<a class="code" href="class_pickup_def.html">PickupDef</a>* pickups, <span class="keywordtype">int</span> levelDifficulty);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="class_pickup.html#ada76f7bbf41784488bcca19e38487e0a">Pickup</a>(<a class="code" href="class_pickup_def.html">PickupDef</a>* pickups, <span class="keywordtype">int</span> <a class="code" href="class_pickup.html#ad1863bfaab406b9f9b34bf5919332b83">defNumber</a>, <span class="keywordtype">int</span> <a class="code" href="class_pickup.html#a069f4d63e779a931843093782273a705">durability</a>);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="class_pickup.html#a26335e2eda7a838e182c4ec3cd950609">~Pickup</a>();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_pickup.html#a1df4686991024c4d285da1badfba265f">use</a>();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_pickup.html#a41e9090bc18dad2cd8a51cb33b15bc26">unequip</a>();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_pickup.html#a512c5fb08b2442621f816d46fd17f2bd">reduceDurability</a>();</div>
+<a href="_pickup_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_pickup_def_8h.html">PickupDef.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_dice_8h.html">Dice.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_pickup.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_pickup.html">Pickup</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="class_pickup.html#ada76f7bbf41784488bcca19e38487e0a">Pickup</a>(<a class="code" href="class_pickup_def.html">PickupDef</a>* pickups, <span class="keywordtype">int</span> levelDifficulty);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="class_pickup.html#ada76f7bbf41784488bcca19e38487e0a">Pickup</a>(<a class="code" href="class_pickup_def.html">PickupDef</a>* pickups, <span class="keywordtype">int</span> <a class="code" href="class_pickup.html#ad1863bfaab406b9f9b34bf5919332b83">defNumber</a>, <span class="keywordtype">int</span> <a class="code" href="class_pickup.html#a069f4d63e779a931843093782273a705">durability</a>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="class_pickup.html#a26335e2eda7a838e182c4ec3cd950609">~Pickup</a>();</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_pickup.html#af03a88785aede1b4034860f564160edc">getTile</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_pickup.html#aea2bd696ce8433c9f84d4ed7d319dbaa">getDurability</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_pickup.html#abbc9c683d5ff81285a89c14d8d8c028a">getPrice</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_pickup.html#abb0772c0dd796156af4b9d52bca346dd">getDefNumber</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="class_pickup.html#aca0a160e0ec372bf20420627e23fc685">getName</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="class_pickup.html#a94941c8a8b2341514399f7cfaa27917a">getDescription</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_pickup.html#a188de681558541a110581cd524c50e5e">   27</a></span>&#160;        <a class="code" href="class_pickup_def.html">PickupDef</a> <a class="code" href="class_pickup.html#a188de681558541a110581cd524c50e5e">pickupDef</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_pickup.html#ad1863bfaab406b9f9b34bf5919332b83">   28</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_pickup.html#ad1863bfaab406b9f9b34bf5919332b83">defNumber</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_pickup.html#a069f4d63e779a931843093782273a705">   29</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_pickup.html#a069f4d63e779a931843093782273a705">durability</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="_pickup_8h.html#a06851bfc4c8eef93ce98bc3e5357446b">   41</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">int</span> <a class="code" href="_pickup_8h.html#a06851bfc4c8eef93ce98bc3e5357446b">pickFromTable</a>(<span class="keywordtype">int</span> levelDifficulty, T* table, <span class="keywordtype">int</span> tableSize){</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    vector&lt;int&gt; frequencies;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">int</span> difficulty = 0;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">int</span> frequency = 0;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">int</span> totalFrequency = 0;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; tableSize; i++){</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        difficulty = table[i].getDifficulty();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">//floor     maxDifficulty</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">//1         5</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">//2         7</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="comment">//3         8</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">//4         9</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">if</span> (difficulty &gt; levelDifficulty) frequency = levelDifficulty*25/difficulty/difficulty;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">else</span> frequency = difficulty*25/levelDifficulty/levelDifficulty;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment">//frequencies should create the most items at difficulty = levelDifficulty</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment">//and no items of where difficulty is far from levelDifficulty</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        frequencies.push_back(frequency);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        totalFrequency += frequency;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_pickup.html#a1df4686991024c4d285da1badfba265f">use</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_pickup.html#a41e9090bc18dad2cd8a51cb33b15bc26">unequip</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_pickup.html#a512c5fb08b2442621f816d46fd17f2bd">reduceDurability</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_pickup.html#af03a88785aede1b4034860f564160edc">getTile</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_pickup.html#aea2bd696ce8433c9f84d4ed7d319dbaa">getDurability</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_pickup.html#abbc9c683d5ff81285a89c14d8d8c028a">getPrice</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_pickup.html#abb0772c0dd796156af4b9d52bca346dd">getDefNumber</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="class_pickup.html#aca0a160e0ec372bf20420627e23fc685">getName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="class_pickup.html#a94941c8a8b2341514399f7cfaa27917a">getDescription</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_pickup.html#a188de681558541a110581cd524c50e5e">   31</a></span>&#160;        <a class="code" href="class_pickup_def.html">PickupDef</a> <a class="code" href="class_pickup.html#a188de681558541a110581cd524c50e5e">pickupDef</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_pickup.html#ad1863bfaab406b9f9b34bf5919332b83">   32</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_pickup.html#ad1863bfaab406b9f9b34bf5919332b83">defNumber</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_pickup.html#a069f4d63e779a931843093782273a705">   33</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_pickup.html#a069f4d63e779a931843093782273a705">durability</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="_pickup_8h.html#a06851bfc4c8eef93ce98bc3e5357446b">   45</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">int</span> <a class="code" href="_pickup_8h.html#a06851bfc4c8eef93ce98bc3e5357446b">pickFromTable</a>(<span class="keywordtype">int</span> levelDifficulty, T* table, <span class="keywordtype">int</span> tableSize){</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    vector&lt;int&gt; frequencies;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> difficulty = 0;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> frequency = 0;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">int</span> totalFrequency = 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; tableSize; i++){</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        difficulty = table[i].getDifficulty();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">//floor     maxDifficulty</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="comment">//1         5</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="comment">//2         7</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment">//3         8</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment">//4         9</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span> (difficulty &gt; levelDifficulty) frequency = levelDifficulty*25/difficulty/difficulty;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">else</span> frequency = difficulty*25/levelDifficulty/levelDifficulty;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">//frequencies should create the most items at difficulty = levelDifficulty</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">//and no items of where difficulty is far from levelDifficulty</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">if</span> (!totalFrequency) <span class="keywordflow">return</span> tableSize - 1; <span class="comment">//nothing has a frequency should mean that the difficulty is excessively high</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                                               <span class="comment">//so use all the highest difficulty monsters/items</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">int</span> item = rand() % totalFrequency;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; tableSize; i++){</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        item -= frequencies[i];</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">if</span> (item &lt; 0) <span class="keywordflow">return</span> i;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">return</span> -1; <span class="comment">//should never be reached</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        frequencies.push_back(frequency);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        totalFrequency += frequency;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span> (!totalFrequency) <span class="keywordflow">return</span> tableSize - 1; <span class="comment">//nothing has a frequency should mean that the difficulty is excessively high</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                               <span class="comment">//so use all the highest difficulty monsters/items</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">int</span> item = rand() % totalFrequency;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; tableSize; i++){</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        item -= frequencies[i];</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">if</span> (item &lt; 0) <span class="keywordflow">return</span> i;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> -1; <span class="comment">//should never be reached</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
 <div class="ttc" id="_pickup_def_8h_html"><div class="ttname"><a href="_pickup_def_8h.html">PickupDef.h</a></div></div>
-<div class="ttc" id="class_pickup_html_ad1863bfaab406b9f9b34bf5919332b83"><div class="ttname"><a href="class_pickup.html#ad1863bfaab406b9f9b34bf5919332b83">Pickup::defNumber</a></div><div class="ttdeci">int defNumber</div><div class="ttdef"><b>Definition:</b> Pickup.h:28</div></div>
+<div class="ttc" id="class_pickup_html_ad1863bfaab406b9f9b34bf5919332b83"><div class="ttname"><a href="class_pickup.html#ad1863bfaab406b9f9b34bf5919332b83">Pickup::defNumber</a></div><div class="ttdeci">int defNumber</div><div class="ttdef"><b>Definition:</b> Pickup.h:32</div></div>
 <div class="ttc" id="class_pickup_html_a94941c8a8b2341514399f7cfaa27917a"><div class="ttname"><a href="class_pickup.html#a94941c8a8b2341514399f7cfaa27917a">Pickup::getDescription</a></div><div class="ttdeci">string getDescription() const </div><div class="ttdef"><b>Definition:</b> Pickup.cpp:85</div></div>
 <div class="ttc" id="class_pickup_html_abb0772c0dd796156af4b9d52bca346dd"><div class="ttname"><a href="class_pickup.html#abb0772c0dd796156af4b9d52bca346dd">Pickup::getDefNumber</a></div><div class="ttdeci">int getDefNumber() const </div><div class="ttdef"><b>Definition:</b> Pickup.cpp:77</div></div>
 <div class="ttc" id="class_pickup_html_af03a88785aede1b4034860f564160edc"><div class="ttname"><a href="class_pickup.html#af03a88785aede1b4034860f564160edc">Pickup::getTile</a></div><div class="ttdeci">int getTile() const </div><div class="ttdef"><b>Definition:</b> Pickup.cpp:59</div></div>
-<div class="ttc" id="class_pickup_html_abbc9c683d5ff81285a89c14d8d8c028a"><div class="ttname"><a href="class_pickup.html#abbc9c683d5ff81285a89c14d8d8c028a">Pickup::getPrice</a></div><div class="ttdeci">int getPrice() const </div><div class="ttdef"><b>Definition:</b> Pickup.cpp:72</div></div>
-<div class="ttc" id="class_pickup_html_a188de681558541a110581cd524c50e5e"><div class="ttname"><a href="class_pickup.html#a188de681558541a110581cd524c50e5e">Pickup::pickupDef</a></div><div class="ttdeci">PickupDef pickupDef</div><div class="ttdef"><b>Definition:</b> Pickup.h:27</div></div>
+<div class="ttc" id="class_pickup_html_abbc9c683d5ff81285a89c14d8d8c028a"><div class="ttname"><a href="class_pickup.html#abbc9c683d5ff81285a89c14d8d8c028a">Pickup::getPrice</a></div><div class="ttdeci">int getPrice() const </div><div class="ttdoc">Get the total price of an item. </div><div class="ttdef"><b>Definition:</b> Pickup.cpp:72</div></div>
+<div class="ttc" id="class_pickup_html_a188de681558541a110581cd524c50e5e"><div class="ttname"><a href="class_pickup.html#a188de681558541a110581cd524c50e5e">Pickup::pickupDef</a></div><div class="ttdeci">PickupDef pickupDef</div><div class="ttdef"><b>Definition:</b> Pickup.h:31</div></div>
 <div class="ttc" id="_dice_8h_html"><div class="ttname"><a href="_dice_8h.html">Dice.h</a></div></div>
 <div class="ttc" id="class_pickup_html_a26335e2eda7a838e182c4ec3cd950609"><div class="ttname"><a href="class_pickup.html#a26335e2eda7a838e182c4ec3cd950609">Pickup::~Pickup</a></div><div class="ttdeci">~Pickup()</div><div class="ttdef"><b>Definition:</b> Pickup.cpp:89</div></div>
-<div class="ttc" id="_pickup_8h_html_a06851bfc4c8eef93ce98bc3e5357446b"><div class="ttname"><a href="_pickup_8h.html#a06851bfc4c8eef93ce98bc3e5357446b">pickFromTable</a></div><div class="ttdeci">int pickFromTable(int levelDifficulty, T *table, int tableSize)</div><div class="ttdef"><b>Definition:</b> Pickup.h:41</div></div>
+<div class="ttc" id="_pickup_8h_html_a06851bfc4c8eef93ce98bc3e5357446b"><div class="ttname"><a href="_pickup_8h.html#a06851bfc4c8eef93ce98bc3e5357446b">pickFromTable</a></div><div class="ttdeci">int pickFromTable(int levelDifficulty, T *table, int tableSize)</div><div class="ttdoc">Chooses either a pickupDef from the pickupDef table or an actor from the actor table. </div><div class="ttdef"><b>Definition:</b> Pickup.h:45</div></div>
 <div class="ttc" id="class_pickup_html_aea2bd696ce8433c9f84d4ed7d319dbaa"><div class="ttname"><a href="class_pickup.html#aea2bd696ce8433c9f84d4ed7d319dbaa">Pickup::getDurability</a></div><div class="ttdeci">int getDurability() const </div><div class="ttdef"><b>Definition:</b> Pickup.cpp:63</div></div>
 <div class="ttc" id="class_pickup_html_aca0a160e0ec372bf20420627e23fc685"><div class="ttname"><a href="class_pickup.html#aca0a160e0ec372bf20420627e23fc685">Pickup::getName</a></div><div class="ttdeci">string getName() const </div><div class="ttdef"><b>Definition:</b> Pickup.cpp:81</div></div>
-<div class="ttc" id="class_pickup_html"><div class="ttname"><a href="class_pickup.html">Pickup</a></div><div class="ttdef"><b>Definition:</b> Pickup.h:8</div></div>
-<div class="ttc" id="class_pickup_html_a1df4686991024c4d285da1badfba265f"><div class="ttname"><a href="class_pickup.html#a1df4686991024c4d285da1badfba265f">Pickup::use</a></div><div class="ttdeci">int use()</div><div class="ttdef"><b>Definition:</b> Pickup.cpp:36</div></div>
-<div class="ttc" id="class_pickup_html_a41e9090bc18dad2cd8a51cb33b15bc26"><div class="ttname"><a href="class_pickup.html#a41e9090bc18dad2cd8a51cb33b15bc26">Pickup::unequip</a></div><div class="ttdeci">void unequip()</div><div class="ttdef"><b>Definition:</b> Pickup.cpp:46</div></div>
-<div class="ttc" id="class_pickup_def_html"><div class="ttname"><a href="class_pickup_def.html">PickupDef</a></div><div class="ttdef"><b>Definition:</b> PickupDef.h:11</div></div>
-<div class="ttc" id="class_pickup_html_a512c5fb08b2442621f816d46fd17f2bd"><div class="ttname"><a href="class_pickup.html#a512c5fb08b2442621f816d46fd17f2bd">Pickup::reduceDurability</a></div><div class="ttdeci">int reduceDurability()</div><div class="ttdef"><b>Definition:</b> Pickup.cpp:55</div></div>
-<div class="ttc" id="class_pickup_html_a069f4d63e779a931843093782273a705"><div class="ttname"><a href="class_pickup.html#a069f4d63e779a931843093782273a705">Pickup::durability</a></div><div class="ttdeci">int durability</div><div class="ttdef"><b>Definition:</b> Pickup.h:29</div></div>
-<div class="ttc" id="class_pickup_html_ada76f7bbf41784488bcca19e38487e0a"><div class="ttname"><a href="class_pickup.html#ada76f7bbf41784488bcca19e38487e0a">Pickup::Pickup</a></div><div class="ttdeci">Pickup(PickupDef *pickups, int levelDifficulty)</div><div class="ttdef"><b>Definition:</b> Pickup.cpp:9</div></div>
+<div class="ttc" id="class_pickup_html"><div class="ttname"><a href="class_pickup.html">Pickup</a></div><div class="ttdoc">Defines an item that the player can pick up and use in the game. </div><div class="ttdef"><b>Definition:</b> Pickup.h:12</div></div>
+<div class="ttc" id="class_pickup_html_a1df4686991024c4d285da1badfba265f"><div class="ttname"><a href="class_pickup.html#a1df4686991024c4d285da1badfba265f">Pickup::use</a></div><div class="ttdeci">int use()</div><div class="ttdoc">Activate an item and remove it forever if it is a consumable. </div><div class="ttdef"><b>Definition:</b> Pickup.cpp:36</div></div>
+<div class="ttc" id="class_pickup_html_a41e9090bc18dad2cd8a51cb33b15bc26"><div class="ttname"><a href="class_pickup.html#a41e9090bc18dad2cd8a51cb33b15bc26">Pickup::unequip</a></div><div class="ttdeci">void unequip()</div><div class="ttdoc">Unequip an item. </div><div class="ttdef"><b>Definition:</b> Pickup.cpp:46</div></div>
+<div class="ttc" id="class_pickup_def_html"><div class="ttname"><a href="class_pickup_def.html">PickupDef</a></div><div class="ttdoc">Defines properties of pickups that are the same for all pickups of that type. </div><div class="ttdef"><b>Definition:</b> PickupDef.h:15</div></div>
+<div class="ttc" id="class_pickup_html_a512c5fb08b2442621f816d46fd17f2bd"><div class="ttname"><a href="class_pickup.html#a512c5fb08b2442621f816d46fd17f2bd">Pickup::reduceDurability</a></div><div class="ttdeci">int reduceDurability()</div><div class="ttdoc">Reduce the durability of an item by 1. </div><div class="ttdef"><b>Definition:</b> Pickup.cpp:55</div></div>
+<div class="ttc" id="class_pickup_html_a069f4d63e779a931843093782273a705"><div class="ttname"><a href="class_pickup.html#a069f4d63e779a931843093782273a705">Pickup::durability</a></div><div class="ttdeci">int durability</div><div class="ttdef"><b>Definition:</b> Pickup.h:33</div></div>
+<div class="ttc" id="class_pickup_html_ada76f7bbf41784488bcca19e38487e0a"><div class="ttname"><a href="class_pickup.html#ada76f7bbf41784488bcca19e38487e0a">Pickup::Pickup</a></div><div class="ttdeci">Pickup(PickupDef *pickups, int levelDifficulty)</div><div class="ttdoc">Create a new pickup of a random type. </div><div class="ttdef"><b>Definition:</b> Pickup.cpp:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_f7c8f6fb9f8a0fa9c300dea72fda1a15.html">Visual Studio 2010</a></li><li class="navelem"><a class="el" href="dir_5f240f04451bb9cd4c6b67d0dababe02.html">Projects</a></li><li class="navelem"><a class="el" href="dir_1f58244af4c7068a1b02cf49941b76d6.html">Game</a></li><li class="navelem"><a class="el" href="dir_27a10d9f4a9b69a5515a4bf1ddb24f81.html">Game</a></li><li class="navelem"><a class="el" href="_pickup_8h.html">Pickup.h</a></li>
-    <li class="footer">Generated on Fri May 9 2014 15:19:01 for Roguelike Game by
+    <li class="footer">Generated on Sun May 11 2014 15:48:06 for Roguelike Game by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>
